@@ -1,7 +1,7 @@
 {
   "name": "@incutonez/zelda-ts",
   "description": "Legend of Zelda in TypeScript using Phaser 3",
-  "version": "1.2.1",
+  "version": "1.0.0",
   "type": "module",
   "repository": {
     "type": "git",
@@ -62,19 +62,19 @@
   },
   "release": {
     "branches": [
-        "main"
+      "main"
     ],
     "plugins": [
-        "@semantic-release/commit-analyzer",
-        "@semantic-release/release-notes-generator",
-        [
-            "@semantic-release/npm",
-            {
-                "npmPublish": false
-            }
-        ],
-        "@semantic-release/git",
-        "@semantic-release/github"
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false
+        }
+      ],
+      "@semantic-release/git",
+      "@semantic-release/github"
     ]
   }
 }
