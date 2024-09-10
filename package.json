@@ -25,6 +25,8 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@volar/language-server": "2.4.0-alpha.18",
+    "@vue/language-server": "2.0.28",
     "phaser": "^3.85.1",
     "vue": "^3.4.27"
   },
