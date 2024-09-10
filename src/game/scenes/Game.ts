@@ -1,4 +1,5 @@
 import { Scene } from "phaser";
+import Player from "@/game/Player.ts";
 import { EventBus } from "../EventBus";
 
 export class Game extends Scene {
@@ -7,23 +8,34 @@ export class Game extends Scene {
 	}
 
 	preload() {
-		this.load.setPath("assets");
+		this.load.spritesheet("player", "character.png", {
+			frameWidth: 16,
+			frameHeight: 16,
+			spacing: 14,
+		});
+		this.load.spritesheet("block", "tiles.png", {
+			frameWidth: 16,
+			frameHeight: 16,
+		});
+		this.load.spritesheet("statue", "tiles.png", {
+			frameWidth: 16,
+			frameHeight: 16,
+			startFrame: 1,
+			spacing: 4,
+		});
+		this.load.spritesheet("bush", "tiles.png", {
+			frameWidth: 16,
+			frameHeight: 16,
+			startFrame: 2,
+			spacing: 4,
+		});
 	}
 
 	create() {
-
-		this.add.image(512, 384, "background");
-		this.add.image(512, 350, "logo").setDepth(100);
-		this.add.text(512, 490, "Make something fun!\nand share it with us:\nsupport@phaser.io", {
-			fontFamily: "Arial Black",
-			fontSize: 38,
-			color: "#ffffff",
-			stroke: "#000000",
-			strokeThickness: 8,
-			align: "center",
-		}).setOrigin(0.5).setDepth(100);
-
+		this.add.image(0, 0, "block").setOrigin(0, 0);
+		this.add.image(16, 0, "statue").setOrigin(0, 0);
+		this.add.image(32, 0, "bush").setOrigin(0, 0);
+		new Player(this, 32, 32);
 		EventBus.emit("current-scene-ready", this);
-
 	}
 }
