@@ -1,4 +1,5 @@
 import { Scene } from "phaser";
+import overworld from "@/assets/overworld.json";
 import { Tiles } from "@/enums/Tiles.ts";
 import { EventBus } from "@/game/EventBus.ts";
 import { CurrentScreen, GridCenterX, GridCenterY } from "@/game/globals.ts";
@@ -22,7 +23,7 @@ export class Game extends Scene {
 			frameHeight: 16,
 			spacing: 4,
 		});
-		this.load.json("overworld", "src/assets/overworld.json");
+		this.load.json("overworld", overworld);
 	}
 
 	create() {
