@@ -1,6 +1,10 @@
 import { Scene } from "phaser";
+import { Tiles } from "@/enums/Tiles.ts";
+import { EventBus } from "@/game/EventBus.ts";
+import { CurrentScreen, GridCenterX, GridCenterY } from "@/game/globals.ts";
 import Player from "@/game/Player.ts";
-import { EventBus } from "../EventBus";
+import { tileBuilder } from "@/game/Tile.ts";
+import { IScreen } from "@/types/common.ts";
 
 export class Game extends Scene {
 	constructor() {
@@ -13,29 +17,25 @@ export class Game extends Scene {
 			frameHeight: 16,
 			spacing: 14,
 		});
-		this.load.spritesheet("block", "tiles.png", {
+		this.load.spritesheet("tiles", "tiles.png", {
 			frameWidth: 16,
 			frameHeight: 16,
-		});
-		this.load.spritesheet("statue", "tiles.png", {
-			frameWidth: 16,
-			frameHeight: 16,
-			startFrame: 1,
 			spacing: 4,
 		});
-		this.load.spritesheet("bush", "tiles.png", {
-			frameWidth: 16,
-			frameHeight: 16,
-			startFrame: 2,
-			spacing: 4,
-		});
+		this.load.json("overworld", "src/assets/overworld.json");
 	}
 
 	create() {
-		this.add.image(0, 0, "block").setOrigin(0, 0);
-		this.add.image(16, 0, "statue").setOrigin(0, 0);
-		this.add.image(32, 0, "bush").setOrigin(0, 0);
-		new Player(this, 32, 32);
+		const data: Record<string, IScreen> = this.cache.json.get("overworld");
+		const walls = this.physics.add.staticGroup();
+		data[CurrentScreen].Tiles.forEach(({ Type, Children }) => {
+			const found = Tiles.find(({ name }) => Type === name);
+			if (found) {
+				tileBuilder(this, "tiles", walls, Children, found.id);
+			}
+		});
+		const player = new Player(this, GridCenterX, GridCenterY);
+		this.physics.add.collider(walls, player);
 		EventBus.emit("current-scene-ready", this);
 	}
 }

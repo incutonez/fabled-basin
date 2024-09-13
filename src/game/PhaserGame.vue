@@ -31,3 +31,13 @@ defineExpose({
 });
 
 </script>
+
+<template>
+	<article class="flex size-full">
+		<section class="flex-1 bg-black" />
+		<section
+			id="game-container"
+		/>
+		<section class="flex-1 bg-black" />
+	</article>
+</template>
