@@ -7,7 +7,7 @@ import ScaleModes = Phaser.Scale.ScaleModes;
 export function startGame() {
 	return new Game({
 		type: AUTO,
-		parent: "app",
+		parent: "game-container",
 		backgroundColor: "#ffefa6",
 		scene: [MainGame],
 		// We need a zoom so our sprites aren't blurry
@@ -25,7 +25,7 @@ export function startGame() {
 		height: 176,
 		scale: {
 			// Taken from https://newdocs.phaser.io/docs/3.55.2/Phaser.Scale.ScaleModes#FIT
-			mode: ScaleModes.FIT,
+			mode: ScaleModes.HEIGHT_CONTROLS_WIDTH,
 		},
 	});
 }

@@ -32,8 +32,8 @@ export async function replaceColors({ colors = [], image, texture, frame }: IRep
 		const h = 16;
 		let spacingX = 0;
 		let spacingY = 0;
-		const modifierX = frame % 9;
-		const modifierY = Math.floor(frame / 6);
+		const modifierX = frame % 10;
+		const modifierY = Math.floor(frame / 10);
 		if (modifierX) {
 			spacingX = 4;
 		}

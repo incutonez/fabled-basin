@@ -1,7 +1,10 @@
 import { Scene } from "phaser";
+import { Tiles } from "@/enums/Tiles.ts";
 import { EventBus } from "@/game/EventBus.ts";
+import { CurrentScreen, GridCenterX, GridCenterY } from "@/game/globals.ts";
 import Player from "@/game/Player.ts";
 import { tileBuilder } from "@/game/Tile.ts";
+import { IScreen } from "@/types/common.ts";
 
 export class Game extends Scene {
 	constructor() {
@@ -19,14 +22,19 @@ export class Game extends Scene {
 			frameHeight: 16,
 			spacing: 4,
 		});
+		this.load.json("overworld", "src/assets/overworld.json");
 	}
 
 	create() {
+		const data: Record<string, IScreen> = this.cache.json.get("overworld");
 		const walls = this.physics.add.staticGroup();
-		tileBuilder(this, "tiles", walls, [[0, 0], [16, 0], [32, 0]], "FF0000", 1);
-		tileBuilder(this, "tiles", walls, [[48, 0]], "00FF00", 2);
-		tileBuilder(this, "tiles", walls, [[64, 0]], "00FF00", 18);
-		const player = new Player(this, 32, 32);
+		data[CurrentScreen].Tiles.forEach(({ Type, Children }) => {
+			const found = Tiles.find(({ name }) => Type === name);
+			if (found) {
+				tileBuilder(this, "tiles", walls, Children, found.id);
+			}
+		});
+		const player = new Player(this, GridCenterX, GridCenterY);
 		this.physics.add.collider(walls, player);
 		EventBus.emit("current-scene-ready", this);
 	}
