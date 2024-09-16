@@ -30,9 +30,17 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_TOKEN: ${{ secrets.SEMANTIC_RELEASE }}
         run: npx semantic-release --deps.bump=inherit
-  build:
+  sleep:
       needs:
           - release
+      runs-on: ubuntu-latest
+      steps:
+          - name: Sleep for 5 seconds, so semantic release can be pushed before we check out code (gets the absolute latest version and isn't a version behind)
+            run: sleep 5s
+            shell: bash
+  build:
+      needs:
+          - sleep
       runs-on: ubuntu-latest
       steps:
           - name: Check out repository code

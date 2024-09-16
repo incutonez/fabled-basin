@@ -1,15 +1,28 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref } from "vue";
-import Phaser from "phaser";
+import { onMounted, onUnmounted, ref, unref, watch } from "vue";
+import Phaser, { Game } from "phaser";
 import { version } from "@/../package.json";
 import { EventBus } from "./EventBus";
 import { startGame } from "./main";
 
 // Save the current scene instance
 const scene = ref();
-const game = ref();
+const game = ref<Game>();
+const debug = ref(true);
 
 const emit = defineEmits(["current-active-scene"]);
+
+watch(debug, ($debug) => {
+	console.log(game.value);
+	const $game = unref(game);
+	if ($game) {
+		$game.scene.scenes.forEach((scene) => {
+			scene.matter.world.drawDebug = $debug;
+			scene.matter.world.debugGraphic.clear();
+		});
+	}
+	// game.value?.physics($debug);
+});
 
 onMounted(() => {
 	game.value = startGame();
@@ -20,10 +33,8 @@ onMounted(() => {
 });
 
 onUnmounted(() => {
-	if (game.value) {
-		game.value.destroy(true);
-		game.value = null;
-	}
+	game.value?.destroy(true);
+	game.value = undefined;
 });
 
 defineExpose({
@@ -39,8 +50,16 @@ defineExpose({
 		<section
 			id="game-container"
 		/>
-		<section class="flex flex-1 items-end bg-black font-semibold text-white">
-			<div class="flex w-full place-content-end p-2">
+		<section class="flex flex-1 flex-col bg-black font-semibold text-white">
+			<label class="flex items-center p-2">
+				<span>Debug</span>
+				<input
+					v-model="debug"
+					type="checkbox"
+					class="ml-2 size-4"
+				>
+			</label>
+			<div class="mt-auto flex w-full place-content-end p-2">
 				<span>Version: {{ version }}</span>
 			</div>
 		</section>
