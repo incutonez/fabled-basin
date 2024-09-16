@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from "vue";
 import Phaser from "phaser";
+import { version } from "@/../package.json";
 import { EventBus } from "./EventBus";
 import { startGame } from "./main";
 
@@ -38,6 +39,10 @@ defineExpose({
 		<section
 			id="game-container"
 		/>
-		<section class="flex-1 bg-black" />
+		<section class="flex flex-1 items-end bg-black font-semibold text-white">
+			<div class="flex w-full place-content-end p-2">
+				<span>Version: {{ version }}</span>
+			</div>
+		</section>
 	</article>
 </template>

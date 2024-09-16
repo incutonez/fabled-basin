@@ -9,11 +9,19 @@ export function startGame() {
 		type: AUTO,
 		parent: "game-container",
 		backgroundColor: "#ffefa6",
+		pixelArt: true,
 		scene: [MainGame],
 		// We need a zoom so our sprites aren't blurry
 		zoom: 2,
 		physics: {
-			default: "arcade",
+			default: "matter",
+			matter: {
+				debug: true,
+				gravity: {
+					x: 0,
+					y: 0,
+				},
+			},
 		},
 		/**
          * We want to create a 16Wx11H grid, where each cell is 16x16 pixels, so we do the maths,
