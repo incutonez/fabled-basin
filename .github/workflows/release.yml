@@ -1,8 +1,6 @@
 name: Release
 on:
     push:
-        branches:
-            - main
         tags:
             - '*'
 jobs:
@@ -10,7 +8,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Check out repository code
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
             - name: Create npmrc
               run: echo '//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN  }}' >> ${{ github.workspace }}/.npmrc
             - name: Install Deps
@@ -20,7 +18,7 @@ jobs:
             - name: Build Game
               run: npm run build
             - name: Deploy 🚀
-              uses: JamesIves/github-pages-deploy-action@v4.3.0
+              uses: JamesIves/github-pages-deploy-action@v4
               with:
                   branch: gh-pages
                   folder: dist
