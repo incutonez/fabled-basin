@@ -1,16 +1,18 @@
 import { Scene } from "phaser";
 import CursorKeys = Phaser.Types.Input.Keyboard.CursorKeys;
+import { BaseSprite } from "@/types/common.ts";
 
-const Velocity = 80;
+const Velocity = 1;
 const FrameRate = 10;
 
-export default class Player extends Phaser.Physics.Arcade.Sprite {
+/* TODOJEF: Change player size, so only waist hits tiles... use setSize
+ * https://github.com/phaserjs/examples/blob/master/public/src/physics/arcade/smaller%20bounding%20box.js#L16 */
+export default class Player extends BaseSprite {
     cursor?: CursorKeys;
 
     constructor(scene: Scene, x: number, y: number, texture = "player") {
-    	super(scene, x, y, texture);
+    	super(scene.matter.world, x, y, texture);
     	scene.add.existing(this);
-    	scene.physics.add.existing(this);
     	/**
          * The update method does not get called on its own, so we have to listen for whenever the
          * scene gets updated, so we can call our internal method.
@@ -18,8 +20,8 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
          */
     	scene.events.on("update", this.update, this);
     	this.scene = scene;
-    	this.setOrigin(0, 0);
-    	this.setCollideWorldBounds(true);
+    	// If we don't have this, when the player collides with something, they start spinning
+    	this.setFixedRotation();
     	this.cursor = scene.input.keyboard?.createCursorKeys();
     	this.anims.create({
     		key: "left",
@@ -81,8 +83,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
     			velocityY = -Velocity;
     			animation = "up";
     		}
-    		this.setVelocityX(velocityX);
-    		this.setVelocityY(velocityY);
+    		this.setVelocity(velocityX, velocityY);
     		if (animation) {
     			anims.play(animation, true);
     		}

@@ -25,7 +25,7 @@ function hexToRgb(hex = "") {
 	};
 }
 
-export async function replaceColors({ colors = [], image, texture, frame }: IReplaceColors) {
+export function replaceColors({ colors = [], image, texture, frame }: IReplaceColors) {
 	const ctx = texture.context;
 	if (ctx && image) {
 		const w = 16;

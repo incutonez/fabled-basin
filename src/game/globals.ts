@@ -1,5 +1,7 @@
 export const CellSize = 16;
 
+export const CellSizeHalf = CellSize / 2;
+
 export const GridHeight = 11;
 
 export const GridWidth = 16;
