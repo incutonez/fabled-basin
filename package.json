@@ -1,7 +1,7 @@
 {
   "name": "@incutonez/zelda-ts",
   "description": "Legend of Zelda in TypeScript using Phaser 3",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "type": "module",
   "repository": {
     "type": "git",
