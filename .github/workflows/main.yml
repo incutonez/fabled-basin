@@ -30,33 +30,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_TOKEN: ${{ secrets.SEMANTIC_RELEASE }}
         run: npx semantic-release --deps.bump=inherit
-  sleep:
-      needs:
-          - release
-      runs-on: ubuntu-latest
-      steps:
-          - name: Sleep 10s
-            run: sleep 10s
-            shell: bash
-  build:
-      needs:
-          - sleep
-      runs-on: ubuntu-latest
-      steps:
-          - name: Check out repository code
-            uses: actions/checkout@v4
-            with:
-                fetch-depth: 0
-          - name: Create npmrc
-            run: echo '//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN  }}' >> ${{ github.workspace }}/.npmrc
-          - name: Install Deps
-            run: npm ci
-            env:
-                GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          - name: Build Game
-            run: npm run build
-          - name: Deploy 🚀
-            uses: JamesIves/github-pages-deploy-action@v4
-            with:
-                branch: gh-pages
-                folder: dist
+      - name: Build Game
+        run: npm run build
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+           branch: gh-pages
+           folder: dist
