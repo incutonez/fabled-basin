@@ -30,9 +30,17 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_TOKEN: ${{ secrets.SEMANTIC_RELEASE }}
         run: npx semantic-release --deps.bump=inherit
-  build:
+  sleep:
       needs:
           - release
+      runs-on: ubuntu-latest
+      steps:
+          - name: Sleep 10s
+            run: sleep 10s
+            shell: bash
+  build:
+      needs:
+          - sleep
       runs-on: ubuntu-latest
       steps:
           - name: Check out repository code
