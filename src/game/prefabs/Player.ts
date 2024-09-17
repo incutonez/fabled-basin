@@ -1,17 +1,17 @@
-import { Scene } from "phaser";
-import CursorKeys = Phaser.Types.Input.Keyboard.CursorKeys;
+import { BaseScene } from "@/game/scenes/BaseScene.ts";
 import { BaseSprite } from "@/types/common.ts";
 
-const Velocity = 1;
+const Velocity = 1.5;
 const FrameRate = 10;
 
 /* TODOJEF: Change player size, so only waist hits tiles... use setSize
  * https://github.com/phaserjs/examples/blob/master/public/src/physics/arcade/smaller%20bounding%20box.js#L16 */
 export default class Player extends BaseSprite {
-    cursor?: CursorKeys;
+    scene: BaseScene;
 
-    constructor(scene: Scene, x: number, y: number, texture = "player") {
+    constructor(scene: BaseScene, x: number, y: number, texture = "player") {
     	super(scene.matter.world, x, y, texture);
+    	this.scene = scene;
     	scene.add.existing(this);
     	/**
          * The update method does not get called on its own, so we have to listen for whenever the
@@ -19,10 +19,8 @@ export default class Player extends BaseSprite {
          * https://github.com/phaserjs/phaser/issues/3378#issuecomment-578684584
          */
     	scene.events.on("update", this.update, this);
-    	this.scene = scene;
     	// If we don't have this, when the player collides with something, they start spinning
     	this.setFixedRotation();
-    	this.cursor = scene.input.keyboard?.createCursorKeys();
     	this.anims.create({
     		key: "left",
     		frames: scene.anims.generateFrameNumbers("player", {
@@ -60,26 +58,26 @@ export default class Player extends BaseSprite {
     	});
     }
 
-    update(time: number, delta: number) {
-    	super.update(time, delta);
-    	const { cursor, anims } = this;
-    	if (cursor) {
+    update() {
+    	const { anims } = this;
+    	const { playerInput, transitioning } = this.scene.playerState;
+    	if (playerInput && !transitioning) {
     		let velocityX = 0;
     		let velocityY = 0;
     		let animation;
-    		if (cursor.left.isDown) {
+    		if (playerInput.left.isDown) {
     			velocityX = -Velocity;
     			animation = "left";
     		}
-    		else if (cursor.right.isDown) {
+    		else if (playerInput.right.isDown) {
     			velocityX = Velocity;
     			animation = "right";
     		}
-    		if (cursor.down.isDown) {
+    		if (playerInput.down.isDown) {
     			velocityY = Velocity;
     			animation = "down";
     		}
-    		else if (cursor.up.isDown) {
+    		else if (playerInput.up.isDown) {
     			velocityY = -Velocity;
     			animation = "up";
     		}

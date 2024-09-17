@@ -23,6 +23,19 @@ export const TilesWallTopLeft = {
 	displayName: "Wall Top Left",
 	name: "WallTopLeft",
 	id: 3,
+	shape: [{
+		x: 0,
+		y: CellSize,
+	}, {
+		x: 0,
+		y: CellSizeHalf + CellSizeHalf / 2,
+	}, {
+		x: CellSizeHalf + CellSizeHalf / 2,
+		y: 0,
+	}, {
+		x: CellSize,
+		y: CellSize,
+	}],
 } as const satisfies ITile;
 
 export const TilesWallTop = {
@@ -403,7 +416,7 @@ export const TilesNone = {
 export const TilesTransition = {
 	displayName: "Transition",
 	name: "Transition",
-	id: 60,
+	id: 37,
 } as const satisfies ITile;
 
 export const TilesWallHoleX = {
