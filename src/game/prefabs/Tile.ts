@@ -2,6 +2,7 @@ import { Scene } from "phaser";
 import { TilesTransition } from "@/enums/Tiles.ts";
 import { WorldColors } from "@/enums/WorldColors.ts";
 import { CellSizeHalf } from "@/game/globals.ts";
+import { BaseScene } from "@/game/scenes/BaseScene.ts";
 import { replaceColors } from "@/game/utils.ts";
 import { BaseSprite, IScreenTileChild, ITile, ITileShape } from "@/types/common.ts";
 
@@ -15,6 +16,7 @@ export interface IWall {
 export default class Tile extends BaseSprite {
     tile: ITile;
     config: IScreenTileChild;
+    declare scene: BaseScene;
 
     constructor({ scene, child, texture, tile }: IWall) {
     	const { X, Y, Colors = [] } = child;
