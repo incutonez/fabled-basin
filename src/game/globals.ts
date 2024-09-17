@@ -9,5 +9,3 @@ export const GridWidth = 16;
 export const GridCenterX = GridWidth / 2 * CellSize;
 
 export const GridCenterY = GridHeight / 2 * CellSize;
-
-export const CurrentScreen = "70";

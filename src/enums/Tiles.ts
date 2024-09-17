@@ -403,7 +403,7 @@ export const TilesNone = {
 export const TilesTransition = {
 	displayName: "Transition",
 	name: "Transition",
-	id: 60,
+	id: 37,
 } as const satisfies ITile;
 
 export const TilesWallHoleX = {

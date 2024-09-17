@@ -1,14 +1,17 @@
 import { Scene } from "phaser";
 import overworld from "@/assets/overworld.json";
-import { Tiles } from "@/enums/Tiles.ts";
 import { EventBus } from "@/game/EventBus.ts";
-import { CurrentScreen, GridCenterX, GridCenterY } from "@/game/globals.ts";
 import Player from "@/game/Player.ts";
-import { tileBuilder } from "@/game/Tile.ts";
+import { OverworldScene } from "@/game/scenes/OverworldScene.ts";
+import Tile from "@/game/Tile.ts";
 import { IScreen } from "@/types/common.ts";
 
 export class Game extends Scene {
     player: Player;
+    currentScreen: {
+    	x: number;
+    	y: number;
+    };
 
     constructor() {
     	super("Game");
@@ -30,11 +33,21 @@ export class Game extends Scene {
 
     create() {
     	const data: Record<string, IScreen> = this.cache.json.get("overworld");
-    	this.player = new Player(this, GridCenterX, GridCenterY);
-    	data[CurrentScreen].Tiles.forEach(({ Type, Children }) => {
-    		const found = Tiles.find(({ name }) => Type === name);
-    		if (found) {
-    			tileBuilder(this, "tiles", Children, found);
+    	this.currentScreen = {
+    		x: 7,
+    		y: 0,
+    	};
+    	const scene = new OverworldScene(data[`${this.currentScreen.x}${this.currentScreen.y}`]);
+    	this.scene.add(scene.Name, scene, true);
+    	this.game.events.on("transition", (tile: Tile) => {
+    		const { Transition } = tile.config;
+    		if (Transition) {
+    			const { X = 0, Y = 0 } = Transition;
+    			this.scene.remove(`${this.currentScreen.x}${this.currentScreen.y}`);
+    			this.currentScreen.x += X;
+    			this.currentScreen.y += Y;
+    			const scene = new OverworldScene(data[`${this.currentScreen.x}${this.currentScreen.y}`]);
+    			this.scene.add(scene.Name, scene, true);
     		}
     	});
     	EventBus.emit("current-scene-ready", this);

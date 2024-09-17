@@ -1,19 +1,18 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref, unref, watch } from "vue";
-import Phaser, { Game } from "phaser";
+import Phaser from "phaser";
 import { version } from "@/../package.json";
 import { EventBus } from "./EventBus";
-import { startGame } from "./main";
+import { ZeldaGame } from "./main";
 
 // Save the current scene instance
 const scene = ref();
-const game = ref<Game>();
+const game = ref<ZeldaGame>();
 const debug = ref(true);
 
 const emit = defineEmits(["current-active-scene"]);
 
 watch(debug, ($debug) => {
-	console.log(game.value);
 	const $game = unref(game);
 	if ($game) {
 		$game.scene.scenes.forEach((scene) => {
@@ -25,7 +24,7 @@ watch(debug, ($debug) => {
 });
 
 onMounted(() => {
-	game.value = startGame();
+	game.value = new ZeldaGame();
 	EventBus.on("current-scene-ready", (scene_instance: Phaser.Scene) => {
 		emit("current-active-scene", scene_instance);
 		scene.value = scene_instance;

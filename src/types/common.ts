@@ -23,6 +23,7 @@ export interface IScreenTileChild {
 	X: number;
 	Y: number;
 	Colors: TWorldColors[];
+	Transition?: IScreen;
 }
 
 export interface IScreenTile {
@@ -41,6 +42,8 @@ export interface IScreen {
 	Items: IScreenTile[];
 	// TODOJEF: TYPE PROPERLY
 	Enemies: IScreenTile[];
+	Template?: string;
+	IsFloating?: boolean;
 }
 
 export import BaseSprite = Phaser.Physics.Matter.Sprite;

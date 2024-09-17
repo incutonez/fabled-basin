@@ -1,25 +1,27 @@
-import { TWorldColors, WorldColors } from "@/enums/WorldColors.ts";
+import { Scene } from "phaser";
+import { TilesTransition } from "@/enums/Tiles.ts";
+import { WorldColors } from "@/enums/WorldColors.ts";
 import { CellSizeHalf } from "@/game/globals.ts";
-import { Game } from "@/game/scenes/Game.ts";
 import { replaceColors } from "@/game/utils.ts";
 import { BaseSprite, IScreenTileChild, ITile, ITileShape } from "@/types/common.ts";
 
 export interface IWall {
-	scene: Game;
-	x: number;
-	y: number;
+	scene: Scene;
 	texture: string;
-	colors: TWorldColors[];
+	child: IScreenTileChild;
 	tile: ITile;
 }
 
-export default class Wall extends BaseSprite {
+export default class Tile extends BaseSprite {
     tile: ITile;
+    config: IScreenTileChild;
 
-    constructor({ scene, x, y, texture, colors, tile }: IWall) {
-    	super(scene.matter.world, x + CellSizeHalf, y + CellSizeHalf, texture, tile.id);
-    	const key = `${texture}_${tile.id}_${colors.join()}`;
+    constructor({ scene, child, texture, tile }: IWall) {
+    	const { X, Y, Colors = [] } = child;
+    	super(scene.matter.world, X + CellSizeHalf, Y + CellSizeHalf, texture, tile.id);
+    	const key = `${texture}_${tile.id}_${Colors.join()}`;
     	this.tile = tile;
+    	this.config = child;
     	/* Only create the image if it doesn't exist... if we didn't do this, we'd get an error from Phaser, plus, it's
          * inefficient to change the coloring multiple times if we already have the image */
     	if (!scene.textures.exists(key)) {
@@ -27,7 +29,7 @@ export default class Wall extends BaseSprite {
     			frame: tile.id,
     			image: scene.textures.get(texture).getSourceImage() as HTMLImageElement,
     			texture: scene.textures.createCanvas(key, 16, 16)!,
-    			colors: colors.flatMap((item, index, arr) => {
+    			colors: Colors.flatMap((item, index, arr) => {
     				if (index % 2 === 1) {
     					return [];
     				}
@@ -38,6 +40,9 @@ export default class Wall extends BaseSprite {
     				};
     			}),
     		});
+    	}
+    	if (tile === TilesTransition) {
+    		this.on("collide", () => scene.game.events.emit("transition", this));
     	}
     	this.createBody(tile.shape);
     	this.setDisplayOrigin(CellSizeHalf, CellSizeHalf);
@@ -64,14 +69,12 @@ export default class Wall extends BaseSprite {
     }
 }
 
-export function tileBuilder(scene: Game, texture: string, children: IScreenTileChild[], tile: ITile) {
-	children.forEach(({ X, Y, Colors }) => {
-		new Wall({
+export function tileBuilder(scene: Scene, texture: string, children: IScreenTileChild[], tile: ITile) {
+	return children.map((child) => {
+		return new Tile({
 			scene,
 			texture,
-			x: X,
-			y: Y,
-			colors: Colors,
+			child,
 			tile,
 		});
 	});
