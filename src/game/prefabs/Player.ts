@@ -1,14 +1,12 @@
-import CursorKeys = Phaser.Types.Input.Keyboard.CursorKeys;
 import { BaseScene } from "@/game/scenes/BaseScene.ts";
 import { BaseSprite } from "@/types/common.ts";
 
-const Velocity = 1;
+const Velocity = 1.5;
 const FrameRate = 10;
 
 /* TODOJEF: Change player size, so only waist hits tiles... use setSize
  * https://github.com/phaserjs/examples/blob/master/public/src/physics/arcade/smaller%20bounding%20box.js#L16 */
 export default class Player extends BaseSprite {
-    cursor: CursorKeys;
     scene: BaseScene;
 
     constructor(scene: BaseScene, x: number, y: number, texture = "player") {
@@ -62,8 +60,8 @@ export default class Player extends BaseSprite {
 
     update() {
     	const { anims } = this;
-    	const { playerInput } = this.scene.playerState;
-    	if (playerInput) {
+    	const { playerInput, transitioning } = this.scene.playerState;
+    	if (playerInput && !transitioning) {
     		let velocityX = 0;
     		let velocityY = 0;
     		let animation;

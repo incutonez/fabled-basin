@@ -16,11 +16,12 @@ watch(debug, ($debug) => {
 	const $game = unref(game);
 	if ($game) {
 		$game.scene.scenes.forEach((scene) => {
-			scene.matter.world.drawDebug = $debug;
-			scene.matter.world.debugGraphic.clear();
+			if (scene.matter.world) {
+				scene.matter.world.drawDebug = $debug;
+				scene.matter.world.debugGraphic.clear();
+			}
 		});
 	}
-	// game.value?.physics($debug);
 });
 
 onMounted(() => {

@@ -1,4 +1,3 @@
-import { Scene } from "phaser";
 import { TilesTransition } from "@/enums/Tiles.ts";
 import { WorldColors } from "@/enums/WorldColors.ts";
 import { CellSizeHalf } from "@/game/globals.ts";
@@ -7,7 +6,7 @@ import { replaceColors } from "@/game/utils.ts";
 import { BaseSprite, IScreenTileChild, ITile, ITileShape } from "@/types/common.ts";
 
 export interface IWall {
-	scene: Scene;
+	scene: BaseScene;
 	texture: string;
 	child: IScreenTileChild;
 	tile: ITile;
@@ -44,7 +43,11 @@ export default class Tile extends BaseSprite {
     		});
     	}
     	if (tile === TilesTransition) {
-    		this.on("collide", () => scene.game.events.emit("transition", this));
+    		this.on("collide", () => {
+    			if (!scene.playerState.transitioning) {
+    				scene.game.events.emit("transition", this);
+    			}
+    		});
     	}
     	this.createBody(tile.shape);
     	this.setDisplayOrigin(CellSizeHalf, CellSizeHalf);
@@ -71,7 +74,7 @@ export default class Tile extends BaseSprite {
     }
 }
 
-export function tileBuilder(scene: Scene, texture: string, children: IScreenTileChild[], tile: ITile) {
+export function tileBuilder(scene: BaseScene, texture: string, children: IScreenTileChild[], tile: ITile) {
 	return children.map((child) => {
 		return new Tile({
 			scene,

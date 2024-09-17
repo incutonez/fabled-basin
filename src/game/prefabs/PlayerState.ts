@@ -1,13 +1,28 @@
-import { GridCenterX, GridCenterY, KEY_BINDINGS } from "@/game/globals.ts";
+import {
+	CellSizeHalf,
+	GridCenterX,
+	GridCenterY,
+	GridHeightPixels,
+	GridWidthPixels,
+	KEY_BINDINGS,
+} from "@/game/globals.ts";
 import CursorKeys = Phaser.Types.Input.Keyboard.CursorKeys;
 import Player from "@/game/prefabs/Player.ts";
+import Tile from "@/game/prefabs/Tile.ts";
 import { BaseScene } from "@/game/scenes/BaseScene.ts";
+import { ITileShape } from "@/types/common.ts";
 
+let anim: string;
 let playerInput: CursorKeys;
+let playerPosition: ITileShape = {
+	x: GridCenterX,
+	y: GridCenterY,
+};
 
 export class PlayerState extends Phaser.Plugins.ScenePlugin {
     player: Player;
     declare scene: BaseScene;
+    transitioning = false;
 
     set playerInput(value: CursorKeys) {
     	playerInput = value;
@@ -19,8 +34,8 @@ export class PlayerState extends Phaser.Plugins.ScenePlugin {
 
     constructor(scene: BaseScene, pluginManager: Phaser.Plugins.PluginManager, key: string) {
     	super(scene, pluginManager, key);
-    	// TODOJEF: Need to load player coords from a state
-    	scene.events.on("create", this.setKeys, this);
+    	// TODOJEF: Do we need to clean up listeners?
+    	scene.events.on("create", this.initPlayer, this);
     	scene.events.on("destroy", this.removeInput, this);
     }
 
@@ -31,8 +46,8 @@ export class PlayerState extends Phaser.Plugins.ScenePlugin {
      * instance to the new scene when it's created.
      * Source: https://phaser.discourse.group/t/issue-when-holding-keyboard-input-as-the-scene-restart/12540/4?u=incutonez
      */
-    setKeys() {
-    	this.player = new Player(this.scene, GridCenterX, GridCenterY);
+    initPlayer() {
+    	this.player = new Player(this.scene, playerPosition.x, playerPosition.y);
     	const { playerInput } = this;
     	if (playerInput) {
     		for (const key of Object.values(playerInput)) {
@@ -43,6 +58,55 @@ export class PlayerState extends Phaser.Plugins.ScenePlugin {
     		// Create our global player input
     		this.playerInput = this.scene.input.keyboard?.addKeys(KEY_BINDINGS) as CursorKeys;
     	}
+    }
+
+    setTransitioning(value: boolean) {
+    	if (value) {
+    		this.player.setActive(false).setVisible(false);
+    	}
+    	else {
+    		this.player.setActive(true).setVisible(true);
+    		this.restorePosition();
+    	}
+    	this.transitioning = value;
+    }
+
+    restorePosition() {
+    	this.player.anims.play(anim);
+    	this.player.setPosition(playerPosition.x, playerPosition.y);
+    }
+
+    // TODOJEF: This should use the player's position and not the tile's
+    savePosition({ config, x, y }: Tile) {
+    	const { Transition } = config;
+    	if (Transition) {
+    		const { X, Y } = Transition;
+    		// We +/- 1 below for each coordinate because we don't want them butting directly up against the collision box
+    		// Traveling to the left
+    		if (X < 0) {
+    			x = GridWidthPixels - CellSizeHalf - 1;
+    			anim = "left";
+    		}
+    		// Traveling to the right
+    		else if (X > 0) {
+    			x = CellSizeHalf + 1;
+    			anim = "right";
+    		}
+    		// Traveling up
+    		if (Y > 0) {
+    			y = GridHeightPixels - CellSizeHalf - 1;
+    			anim = "up";
+    		}
+    		// Traveling down
+    		else if (Y < 0) {
+    			y = CellSizeHalf + 1;
+    			anim = "down";
+    		}
+    	}
+    	playerPosition = {
+    		x: x,
+    		y: y,
+    	};
     }
 
     removeInput() {
