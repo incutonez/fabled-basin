@@ -3,11 +3,11 @@ import { onMounted, onUnmounted, ref, unref, watch } from "vue";
 import Phaser from "phaser";
 import { version } from "@/../package.json";
 import { EventBus } from "./EventBus";
-import { ZeldaGame } from "./main";
+import { LegendOfJef } from "./main";
 
 // Save the current scene instance
 const scene = ref();
-const game = ref<ZeldaGame>();
+const game = ref<LegendOfJef>();
 const debug = ref(true);
 const fileInputEl = ref<HTMLInputElement>();
 
@@ -41,7 +41,7 @@ watch(debug, ($debug) => {
 });
 
 onMounted(() => {
-	game.value = new ZeldaGame();
+	game.value = new LegendOfJef();
 	EventBus.on("current-scene-ready", (scene_instance: Phaser.Scene) => {
 		emit("current-active-scene", scene_instance);
 		scene.value = scene_instance;
@@ -66,8 +66,9 @@ defineExpose({
 		<section class="flex flex-1 flex-col bg-black font-semibold text-white">
 			<div class="flex flex-col items-start space-y-2 p-2">
 				<a
-					href="http://incutonez.github.io/Sandbox/#/zelda"
+					href="http://incutonez.github.io/Sandbox/#/game"
 					class="text-sky-500 underline"
+					target="_blank"
 				>World Builder</a>
 				<button
 					class="rounded border bg-sky-700 px-2 py-1"

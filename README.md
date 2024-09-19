@@ -1,14 +1,14 @@
 # Overview
 
-I love the original NES Legend of Zelda, and I've tried writing it in [Unity](https://github.com/incutonez/ZeldaU), but I had gotten a little burned out from doing that, so I decided to try it in TypeScript + Vue + Phaser 3.
+I love the original NES Legend of Zelda, and I've tried writing it in [Unity](https://github.com/incutonez/ZeldaU), but I had gotten a little burned out from doing that, so I decided to try something like it in TypeScript + Vue + Phaser 3.
 
 # Deployed Version
 
-You can view the deployed version [here](https://incutonez.github.io/ZeldaTS/).  It's deployed using [GitHub Pages Deploy Action](https://github.com/JamesIves/github-pages-deploy-action).
+You can view the deployed version [here](https://incutonez.github.io/LegendOfJef/).  It's deployed using [GitHub Pages Deploy Action](https://github.com/JamesIves/github-pages-deploy-action).
 
 # Architecture
 
-The individual screens are stored in JSON and generated using my [Zelda World Builder app](http://incutonez.github.io/Sandbox/#/zelda).
+The individual screens are stored in JSON and generated using my [LoJ World Builder app](http://incutonez.github.io/Sandbox/#/game).
 
 # Assets
 

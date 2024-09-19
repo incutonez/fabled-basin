@@ -1,9 +1,9 @@
 import { Scene } from "phaser";
-import overworld from "@/assets/overworld.json";
+import game from "@/assets/game.json";
 import { EventBus } from "@/game/EventBus.ts";
 import { PlayerState } from "@/game/prefabs/PlayerState.ts";
 import { OverworldScene } from "@/game/scenes/OverworldScene.ts";
-import { IOverworld } from "@/types/common.ts";
+import { IWorld } from "@/types/common.ts";
 
 export class MainScene extends Scene {
     playerState: PlayerState;
@@ -23,12 +23,12 @@ export class MainScene extends Scene {
     		frameHeight: 16,
     		spacing: 4,
     	});
-    	this.load.json("overworld", overworld);
+    	this.cache.json.add("game", game);
     }
 
     create() {
-    	this.loadWorld(this.cache.json.get("overworld"));
-    	EventBus.on("loadWorld", (data: Record<string, IOverworld>) => {
+    	this.loadWorld(this.cache.json.get("game"));
+    	EventBus.on("loadWorld", (data: IWorld[]) => {
     		this.cache.json.remove("game");
     		this.cache.json.add("game", data);
     		for (let i = this.game.scene.scenes.length - 1; i >= 0; i--) {
@@ -41,16 +41,24 @@ export class MainScene extends Scene {
     	});
     }
 
-    loadWorld(data: Record<string, IOverworld>) {
-    	// TODOJEF: We need to cycle through each one and pick which one to start in... need a property for that
-    	data["Test"].Children.forEach((child) => {
-    		const newScene = new OverworldScene(child);
-    		this.scene.add(newScene.Name, newScene);
+    loadWorld(data: IWorld[]) {
+    	let startWorld: IWorld | undefined;
+    	data.forEach((world) => {
+    		if (world.IsInitialWorld) {
+    			startWorld = world;
+    		}
+    		world.Children.forEach((child) => {
+    			const newScene = new OverworldScene(child);
+    			// TODOJEF: This will be an issue... need to prepend parent's name here?
+    			this.scene.add(newScene.Name, newScene);
+    		});
     	});
-    	this.playerState.playerPosition = {
-    		x: data["Test"].Spawn.SceneX,
-    		y: data["Test"].Spawn.SceneY,
-    	};
-    	this.scene.start(data["Test"].Spawn.Name);
+    	if (startWorld) {
+    		this.playerState.playerPosition = {
+    			x: startWorld.Spawn.SceneX,
+    			y: startWorld.Spawn.SceneY,
+    		};
+    		this.scene.start(startWorld.Spawn.Name);
+    	}
     }
 }

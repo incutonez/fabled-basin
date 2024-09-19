@@ -1,0 +1,3000 @@
+[{
+    "Name": "Q1 Overworld",
+    "Spawn": {
+        "SceneX": 112,
+        "SceneY": 88,
+        "Name": "70"
+    },
+    "IsInitialWorld": true,
+    "Children": [
+        {
+            "X": 6,
+            "Y": 0,
+            "Name": "60",
+            "GroundColor": "Tan",
+            "AccentColor": "Brown",
+            "Tiles": [
+                {
+                    "Type": "WallBottom",
+                    "Children": [
+                        {
+                            "X": 0,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 16,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 32,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 48,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 64,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 80,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 96,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 112,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 128,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 144,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 160,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 176,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 224,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 0,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 16,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 32,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 48,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 64,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 80,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 96,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 112,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 128,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 144,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 160,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 224,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 224,
+                            "Y": 32,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 32,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 48,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 112,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 224,
+                            "Y": 128,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 128,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 224,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 0,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 16,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 32,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 48,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 64,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 80,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 96,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 112,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 128,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 144,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 160,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 176,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 192,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 208,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 224,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Type": "WallBottomRight",
+                    "Children": [
+                        {
+                            "X": 176,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Type": "Rock",
+                    "Children": [
+                        {
+                            "X": 128,
+                            "Y": 48,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 160,
+                            "Y": 64,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 32,
+                            "Y": 80,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 80,
+                            "Y": 80,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 128,
+                            "Y": 80,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 160,
+                            "Y": 96,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 128,
+                            "Y": 112,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Type": "WallBottomLeft",
+                    "Children": [
+                        {
+                            "X": 224,
+                            "Y": 48,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 64,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Type": "Transition",
+                    "Children": [
+                        {
+                            "X": 256,
+                            "Y": 80,
+                            "Transition": {
+                                "X": 7,
+                                "Y": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "Type": "WallTopLeft",
+                    "Children": [
+                        {
+                            "X": 240,
+                            "Y": 96,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 224,
+                            "Y": 112,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Type": "WallTop",
+                    "Children": [
+                        {
+                            "X": 0,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 16,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 32,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 48,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 64,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 80,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 96,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 112,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 128,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 144,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 160,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 176,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 192,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 208,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "Items": [],
+            "Enemies": []
+        },
+        {
+            "X": 7,
+            "Y": 0,
+            "Name": "70",
+            "GroundColor": "Tan",
+            "AccentColor": "Brown",
+            "Tiles": [
+                {
+                    "Type": "WallBottom",
+                    "Children": [
+                        {
+                            "X": 0,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 16,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 32,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 48,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 64,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 80,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 96,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 144,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 160,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 176,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 192,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 208,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 224,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 0,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 16,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 32,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 48,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 80,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 144,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 160,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 176,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 192,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 208,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 224,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 0,
+                            "Y": 32,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 16,
+                            "Y": 32,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 32,
+                            "Y": 32,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 144,
+                            "Y": 32,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 160,
+                            "Y": 32,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 176,
+                            "Y": 32,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 192,
+                            "Y": 32,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 208,
+                            "Y": 32,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 224,
+                            "Y": 32,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 32,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 0,
+                            "Y": 48,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 16,
+                            "Y": 48,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 144,
+                            "Y": 48,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 160,
+                            "Y": 48,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 176,
+                            "Y": 48,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 192,
+                            "Y": 48,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 208,
+                            "Y": 48,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 224,
+                            "Y": 48,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 48,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 0,
+                            "Y": 64,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 160,
+                            "Y": 64,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 176,
+                            "Y": 64,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 192,
+                            "Y": 64,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 208,
+                            "Y": 64,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 224,
+                            "Y": 64,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 64,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 0,
+                            "Y": 112,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 16,
+                            "Y": 112,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 224,
+                            "Y": 112,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 112,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 0,
+                            "Y": 128,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 16,
+                            "Y": 128,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 224,
+                            "Y": 128,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 128,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 0,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 16,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 32,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 208,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 224,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 0,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 16,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 32,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 48,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 64,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 80,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 96,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 112,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 128,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 144,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 160,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 176,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 192,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 208,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 224,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Type": "Transition",
+                    "Children": [
+                        {
+                            "X": 112,
+                            "Y": -16,
+                            "Transition": {
+                                "X": 7,
+                                "Y": 1
+                            }
+                        },
+                        {
+                            "X": 128,
+                            "Y": -16,
+                            "Transition": {
+                                "X": 7,
+                                "Y": 1
+                            }
+                        },
+                        {
+                            "X": -16,
+                            "Y": 80,
+                            "Transition": {
+                                "X": 6,
+                                "Y": 0
+                            }
+                        },
+                        {
+                            "X": 256,
+                            "Y": 80,
+                            "Transition": {
+                                "X": 8,
+                                "Y": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "Type": "Door",
+                    "Children": [
+                        {
+                            "X": 64,
+                            "Y": 16,
+                            "Colors": [
+                                "White",
+                                "Black"
+                            ],
+                            "Transition": {
+                                "X": 0,
+                                "Y": 0,
+                                "Name": "00"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "Type": "WallBottomRight",
+                    "Children": [
+                        {
+                            "X": 96,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 48,
+                            "Y": 32,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 32,
+                            "Y": 48,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 16,
+                            "Y": 64,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Type": "WallBottomLeft",
+                    "Children": [
+                        {
+                            "X": 144,
+                            "Y": 64,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Type": "WallTop",
+                    "Children": [
+                        {
+                            "X": 0,
+                            "Y": 96,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 96,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 48,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 64,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 80,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 96,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 112,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 128,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 144,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 160,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 176,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 192,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Type": "WallTopRight",
+                    "Children": [
+                        {
+                            "X": 16,
+                            "Y": 96,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 32,
+                            "Y": 128,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Type": "WallTopLeft",
+                    "Children": [
+                        {
+                            "X": 224,
+                            "Y": 96,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 208,
+                            "Y": 128,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "Items": [],
+            "Enemies": []
+        },
+        {
+            "X": 8,
+            "Y": 0,
+            "Name": "80",
+            "GroundColor": "Tan",
+            "AccentColor": "Brown",
+            "Tiles": [
+                {
+                    "Type": "WallBottom",
+                    "Children": [
+                        {
+                            "X": 0,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 16,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 0,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 16,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 0,
+                            "Y": 32,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 16,
+                            "Y": 32,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 0,
+                            "Y": 48,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 0,
+                            "Y": 112,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 0,
+                            "Y": 128,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 16,
+                            "Y": 128,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 0,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 16,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 0,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 16,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Type": "Bush",
+                    "Children": [
+                        {
+                            "X": 32,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 64,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 96,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 144,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 176,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 208,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 32,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 64,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 96,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 144,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 176,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 208,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 96,
+                            "Y": 48,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 144,
+                            "Y": 48,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 176,
+                            "Y": 48,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 208,
+                            "Y": 48,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 32,
+                            "Y": 64,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 64,
+                            "Y": 64,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 96,
+                            "Y": 80,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 144,
+                            "Y": 80,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 176,
+                            "Y": 80,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 208,
+                            "Y": 80,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 32,
+                            "Y": 96,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 64,
+                            "Y": 96,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 96,
+                            "Y": 112,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 144,
+                            "Y": 112,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 176,
+                            "Y": 112,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 208,
+                            "Y": 112,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 32,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 48,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 64,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 80,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 96,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 112,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 128,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 144,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 160,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 176,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 192,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 208,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 224,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 32,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 48,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 64,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 80,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 96,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 112,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 128,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 144,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 160,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 176,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 192,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 208,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 224,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Type": "WallBottomRight",
+                    "Children": [
+                        {
+                            "X": 16,
+                            "Y": 48,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 0,
+                            "Y": 64,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Type": "Transition",
+                    "Children": [
+                        {
+                            "X": -16,
+                            "Y": 80,
+                            "Transition": {
+                                "X": 7,
+                                "Y": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "Type": "WallTopRight",
+                    "Children": [
+                        {
+                            "X": 0,
+                            "Y": 96,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 16,
+                            "Y": 112,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "Items": [],
+            "Enemies": []
+        },
+        {
+            "X": 7,
+            "Y": 1,
+            "Name": "71",
+            "GroundColor": "Tan",
+            "AccentColor": "Brown",
+            "Tiles": [
+                {
+                    "Type": "WallBottom",
+                    "Children": [
+                        {
+                            "X": 0,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 16,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 32,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 48,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 64,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 80,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 96,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 112,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 128,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 144,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 160,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 176,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 192,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 208,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 224,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 0,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 0,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 16,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 32,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 48,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 64,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 80,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 96,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 112,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 128,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 144,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 160,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 176,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 192,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 208,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 224,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 16,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 0,
+                            "Y": 32,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 32,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 0,
+                            "Y": 128,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 128,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 0,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 16,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 144,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 160,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 224,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 0,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 16,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 32,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 48,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 64,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 80,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 96,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 144,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 160,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 176,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 192,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 208,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 224,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 160,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Type": "WallBottomRight",
+                    "Children": [
+                        {
+                            "X": 16,
+                            "Y": 32,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 160,
+                            "Y": 32,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 0,
+                            "Y": 48,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Type": "WallBottomLeft",
+                    "Children": [
+                        {
+                            "X": 144,
+                            "Y": 32,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 224,
+                            "Y": 32,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 240,
+                            "Y": 48,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Type": "Rock",
+                    "Children": [
+                        {
+                            "X": 48,
+                            "Y": 48,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 80,
+                            "Y": 48,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 192,
+                            "Y": 48,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 48,
+                            "Y": 80,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 80,
+                            "Y": 80,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 192,
+                            "Y": 80,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 48,
+                            "Y": 112,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 80,
+                            "Y": 112,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 192,
+                            "Y": 112,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Type": "WallTopRight",
+                    "Children": [
+                        {
+                            "X": 0,
+                            "Y": 112,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 16,
+                            "Y": 128,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 160,
+                            "Y": 128,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Type": "WallTopLeft",
+                    "Children": [
+                        {
+                            "X": 240,
+                            "Y": 112,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 144,
+                            "Y": 128,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 224,
+                            "Y": 128,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Type": "WallTop",
+                    "Children": [
+                        {
+                            "X": 32,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 48,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 64,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 80,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 96,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 176,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 192,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        },
+                        {
+                            "X": 208,
+                            "Y": 144,
+                            "Colors": [
+                                "WhitePure",
+                                "Green"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Type": "Transition",
+                    "Children": [
+                        {
+                            "X": 112,
+                            "Y": 176,
+                            "Transition": {
+                                "X": 7,
+                                "Y": 0
+                            }
+                        },
+                        {
+                            "X": 128,
+                            "Y": 176,
+                            "Transition": {
+                                "X": 7,
+                                "Y": 0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "Items": [],
+            "Enemies": []
+        }
+    ]
+}]
