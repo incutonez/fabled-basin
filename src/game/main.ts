@@ -6,7 +6,7 @@ import Tile from "@/game/prefabs/Tile.ts";
 import { MainScene } from "@/game/scenes/MainScene.ts";
 import { OverworldScene } from "@/game/scenes/OverworldScene.ts";
 
-export class ZeldaGame extends Game {
+export class LegendOfJef extends Game {
     currentScreen: {
     	x: number;
     	y: number;
@@ -64,11 +64,12 @@ export class ZeldaGame extends Game {
     		const { Transition } = tile.config;
     		if (Transition) {
     			const { X = 0, Y = 0 } = Transition;
-    			this.currentScreen.x += X;
-    			this.currentScreen.y += Y;
+    			this.currentScreen.x = X;
+    			this.currentScreen.y = Y;
     			const currentScene = tile.scene;
-    			const nextScene = tile.scene.scene.get(`${this.currentScreen.x}${this.currentScreen.y}`) as OverworldScene;
-    			const cam = tile.scene.cameras.main;
+    			const direction = currentScene.playerState.playerDirection;
+    			const nextScene = currentScene.scene.get(`${this.currentScreen.x}${this.currentScreen.y}`) as OverworldScene;
+    			const cam = currentScene.cameras.main;
     			const targetCam = nextScene.cameras.main;
     			currentScene.playerState.savePosition(tile);
     			currentScene.scene.transition({
@@ -81,24 +82,28 @@ export class ZeldaGame extends Game {
     				},
     				onUpdate(progress: number) {
     					const t = Phaser.Math.Easing.Quadratic.InOut(progress);
-    					if (X < 0) {
+    					if (direction === "left") {
+    						cam.setScroll(targetCam.x, targetCam.y);
     						cam.setViewport(t * GridWidthPixels, 0, (1 - t) * GridWidthPixels, cam.height);
     						targetCam.setViewport(0, 0, t * GridWidthPixels, targetCam.height);
     						targetCam.setScroll((1 - t) * GridWidthPixels, 0);
     					}
-    					else if (X > 0) {
-    						cam.setViewport(0, 0, (1 - t) * GridWidthPixels, cam.height);
+    					else if (direction === "right") {
     						cam.setScroll(t * GridWidthPixels, 0);
+    						cam.setViewport(0, 0, (1 - t) * GridWidthPixels, cam.height);
+    						targetCam.setScroll(cam.x, cam.y);
     						targetCam.setViewport((1 - t) * GridWidthPixels, 0, t * GridWidthPixels, targetCam.height);
     					}
-    					if (Y > 0) {
+    					else if (direction === "up") {
+    						cam.setScroll(targetCam.x, targetCam.y);
     						cam.setViewport(0, t * GridHeightPixels, cam.width, (1 - t) * GridHeightPixels);
     						targetCam.setViewport(0, 0, targetCam.width, t * GridHeightPixels);
     						targetCam.setScroll(0, (1 - t) * GridHeightPixels);
     					}
-    					else if (Y < 0) {
-    						cam.setViewport(0, 0, cam.width, (1 - t) * GridHeightPixels);
+    					else if (direction === "down") {
     						cam.setScroll(0, t * GridHeightPixels);
+    						cam.setViewport(0, 0, cam.width, (1 - t) * GridHeightPixels);
+    						targetCam.setScroll(cam.x, cam.y);
     						targetCam.setViewport(0, (1 - t) * GridHeightPixels, targetCam.width, t * GridHeightPixels);
     					}
     					if (progress === 1) {

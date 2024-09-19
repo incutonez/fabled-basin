@@ -31,6 +31,17 @@ export interface IScreenTile {
 	Children: IScreenTileChild[];
 }
 
+export interface IWorld {
+	Name: string;
+	IsInitialWorld: boolean;
+	Spawn: {
+		SceneX: number;
+		SceneY: number;
+		Name: string;
+	};
+	Children: IScreen[];
+}
+
 export interface IScreen {
 	X: number;
 	Y: number;
