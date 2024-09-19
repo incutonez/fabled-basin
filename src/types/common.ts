@@ -31,6 +31,16 @@ export interface IScreenTile {
 	Children: IScreenTileChild[];
 }
 
+export interface IOverworld {
+	Name: string;
+	Spawn: {
+		SceneX: number;
+		SceneY: number;
+		Name: string;
+	};
+	Children: IScreen[];
+}
+
 export interface IScreen {
 	X: number;
 	Y: number;

@@ -1,7 +1,5 @@
 import {
 	CellSizeHalf,
-	GridCenterX,
-	GridCenterY,
 	GridHeightPixels,
 	GridWidthPixels,
 	KEY_BINDINGS,
@@ -14,9 +12,9 @@ import { ITileShape } from "@/types/common.ts";
 
 let anim: string;
 let playerInput: CursorKeys;
-let playerPosition: ITileShape = {
-	x: GridCenterX,
-	y: GridCenterY,
+const playerPosition: ITileShape = {
+	x: -1,
+	y: -1,
 };
 
 export class PlayerState extends Phaser.Plugins.ScenePlugin {
@@ -24,12 +22,25 @@ export class PlayerState extends Phaser.Plugins.ScenePlugin {
     declare scene: BaseScene;
     transitioning = false;
 
+    get playerPosition() {
+    	return playerPosition;
+    }
+
+    set playerPosition({ x, y }: ITileShape) {
+    	playerPosition.x = x;
+    	playerPosition.y = y;
+    }
+
     set playerInput(value: CursorKeys) {
     	playerInput = value;
     }
 
     get playerInput() {
     	return playerInput;
+    }
+
+    get playerDirection() {
+    	return this.player.anims.getName();
     }
 
     constructor(scene: BaseScene, pluginManager: Phaser.Plugins.PluginManager, key: string) {
@@ -47,7 +58,7 @@ export class PlayerState extends Phaser.Plugins.ScenePlugin {
      * Source: https://phaser.discourse.group/t/issue-when-holding-keyboard-input-as-the-scene-restart/12540/4?u=incutonez
      */
     initPlayer() {
-    	this.player = new Player(this.scene, playerPosition.x, playerPosition.y);
+    	this.player = new Player(this.scene, this.playerPosition.x, this.playerPosition.y);
     	const { playerInput } = this;
     	if (playerInput) {
     		for (const key of Object.values(playerInput)) {
@@ -73,37 +84,33 @@ export class PlayerState extends Phaser.Plugins.ScenePlugin {
 
     restorePosition() {
     	this.player.anims.play(anim);
-    	this.player.setPosition(playerPosition.x, playerPosition.y);
+    	this.player.setPosition(this.playerPosition.x, this.playerPosition.y);
     }
 
     // TODOJEF: This should use the player's position and not the tile's
     savePosition({ config, x, y }: Tile) {
     	const { Transition } = config;
     	if (Transition) {
-    		const { X, Y } = Transition;
+    		anim = this.playerDirection;
     		// We +/- 1 below for each coordinate because we don't want them butting directly up against the collision box
     		// Traveling to the left
-    		if (X < 0) {
+    		if (anim === "left") {
     			x = GridWidthPixels - CellSizeHalf - 1;
-    			anim = "left";
     		}
     		// Traveling to the right
-    		else if (X > 0) {
+    		else if (anim === "right") {
     			x = CellSizeHalf + 1;
-    			anim = "right";
     		}
     		// Traveling up
-    		if (Y > 0) {
+    		else if (anim === "up") {
     			y = GridHeightPixels - CellSizeHalf - 1;
-    			anim = "up";
     		}
     		// Traveling down
-    		else if (Y < 0) {
+    		else if (anim === "down") {
     			y = CellSizeHalf + 1;
-    			anim = "down";
     		}
     	}
-    	playerPosition = {
+    	this.playerPosition = {
     		x: x,
     		y: y,
     	};
