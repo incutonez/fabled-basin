@@ -1,11 +1,11 @@
 {
-  "name": "@incutonez/legend-of-jef",
+  "name": "@incutonez/legend-of-one-f",
   "description": "Legend of Jef in TypeScript using Phaser 3",
   "version": "1.5.0",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/incutonez/LegendOfJef.git"
+    "url": "git+https://github.com/incutonez/legend-of-one-f.git"
   },
   "author": "incutonez@hotmail.com",
   "license": "MIT",
