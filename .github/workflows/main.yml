@@ -25,6 +25,8 @@ jobs:
           node-version: "lts/*"
       - name: Install dependencies
         run: npm clean-install
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
