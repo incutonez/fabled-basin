@@ -3,14 +3,14 @@ import { fileURLToPath, URL } from "node:url";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-	base: "/LegendOfJef/",
+	base: "/LegendOfOneF/",
 	plugins: [vue()],
 	resolve: {
 		alias: {
 			"@": fileURLToPath(new URL("../src", import.meta.url)),
 		},
 	},
-	logLevel: "warning",
+	logLevel: "warn",
 	build: {
 		rollupOptions: {
 			output: {

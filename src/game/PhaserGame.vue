@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref, unref, watch } from "vue";
+import { BaseButton } from "@incutonez/core-ui/dist/components";
 import Phaser from "phaser";
 import { version } from "@/../package.json";
 import { EventBus } from "./EventBus";
 import { LegendOfJef } from "./main";
 
+// TODOJEF: Add ability to edit the built game config in the app, where it reloads the game
 // Save the current scene instance
 const scene = ref();
 const game = ref<LegendOfJef>();
@@ -70,12 +72,10 @@ defineExpose({
 					class="text-sky-500 underline"
 					target="_blank"
 				>World Builder</a>
-				<button
-					class="rounded border bg-sky-700 px-2 py-1"
+				<BaseButton
+					text="Load World"
 					@click="onClickLoadWorld"
-				>
-					Load World
-				</button>
+				/>
 				<input
 					v-show="false"
 					ref="fileInputEl"
