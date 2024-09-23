@@ -3,7 +3,7 @@ import { fileURLToPath, URL } from "node:url";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-	base: "/LegendOfOneF/",
+	base: "/legend-of-one-f/",
 	plugins: [vue()],
 	resolve: {
 		alias: {
