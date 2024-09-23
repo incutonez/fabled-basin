@@ -24,9 +24,7 @@ jobs:
         with:
           node-version: "lts/*"
       - name: Add token to npmrc
-        run: |
-            echo "//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}" >> .npmrc
-            cat .npmrc
+        run: echo "//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}" >> .npmrc
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install dependencies
