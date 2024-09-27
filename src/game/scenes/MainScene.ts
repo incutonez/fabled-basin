@@ -13,10 +13,9 @@ export class MainScene extends Scene {
     }
 
     preload() {
-    	this.load.spritesheet("player", "character.png", {
-    		frameWidth: 16,
-    		frameHeight: 16,
-    		spacing: 14,
+    	this.load.spritesheet("guy", "Guy.png", {
+    		frameWidth: 32,
+    		frameHeight: 32,
     	});
     	this.load.spritesheet("tiles", "tiles.png", {
     		frameWidth: 16,
