@@ -21,6 +21,7 @@ export class PlayerState extends Phaser.Plugins.ScenePlugin {
     player: Player;
     declare scene: BaseScene;
     transitioning = false;
+    currentAnimation: "walk" | "up" | "down" | null;
 
     get playerPosition() {
     	return playerPosition;
@@ -37,6 +38,16 @@ export class PlayerState extends Phaser.Plugins.ScenePlugin {
 
     get playerInput() {
     	return playerInput;
+    }
+
+    get inputState() {
+    	const { playerInput } = this;
+    	return {
+    		up: playerInput.up.isDown,
+    		down: playerInput.down.isDown,
+    		left: playerInput.left.isDown,
+    		right: playerInput.right.isDown,
+    	};
     }
 
     get playerDirection() {

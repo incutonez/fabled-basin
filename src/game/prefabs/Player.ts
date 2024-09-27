@@ -1,7 +1,7 @@
 import { BaseScene } from "@/game/scenes/BaseScene.ts";
 import { BaseSprite } from "@/types/common.ts";
 
-const Velocity = 1.5;
+const Velocity = 1.6;
 const FrameRate = 10;
 
 /* TODOJEF: Change player size, so only waist hits tiles... use setSize
@@ -71,48 +71,59 @@ export default class Player extends BaseSprite {
     }
 
     update() {
+    	if (this.scene.playerState.transitioning) {
+    		return;
+    	}
     	const { anims } = this;
-    	const { playerInput, transitioning } = this.scene.playerState;
-    	if (playerInput && !transitioning) {
-    		let velocityX = 0;
-    		let velocityY = 0;
-    		let flipX = false;
-    		let animation;
-    		if (playerInput.left.isDown) {
-    			velocityX = -Velocity;
-    			animation = "walk";
-    			flipX = true;
-    		}
-    		else if (playerInput.right.isDown) {
-    			velocityX = Velocity;
-    			animation = "walk";
-    		}
-    		if (playerInput.down.isDown) {
-    			velocityY = Velocity;
-    			animation = "down";
-    		}
-    		else if (playerInput.up.isDown) {
-    			velocityY = -Velocity;
-    			animation = "up";
-    		}
-    		this.setVelocity(velocityX, velocityY);
-    		// Only flip if we've got a velocity, otherwise, we want the flip to persist when the player's stopped
-    		if (velocityX || velocityY) {
-    			this.setFlipX(flipX);
-    		}
-    		if (animation) {
-    			anims.play(animation, true);
-    		}
-    		else {
-    			const currentAnim = this.anims.getName();
-    			if (currentAnim === "walk") {
-    				this.setFrame(this.anims.get("walk").frames[0].textureFrame);
-    			}
-    			else {
-    				// If no active animation, stop all animations
-    				anims.stop();
-    			}
+    	let velocityX = 0;
+    	let velocityY = 0;
+    	let flipX = false;
+    	let { currentAnimation } = this.scene.playerState;
+    	let nextAnimation: typeof currentAnimation = null;
+    	const { up, down, left, right } = this.scene.playerState.inputState;
+    	if (left || right) {
+    		nextAnimation = "walk";
+    	}
+    	else if (down) {
+    		nextAnimation = "down";
+    	}
+    	else if (up) {
+    		nextAnimation = "up";
+    	}
+    	// If the currentAnimation no longer has its corresponding key being pressed, let's update it
+    	if (!currentAnimation || currentAnimation === "walk" && !(left || right) || currentAnimation === "down" && !down || currentAnimation === "up" && !up) {
+    		currentAnimation = nextAnimation;
+    	}
+    	if (left) {
+    		velocityX = -Velocity;
+    		flipX = true;
+    	}
+    	else if (right) {
+    		velocityX = Velocity;
+    	}
+    	if (down) {
+    		velocityY = Velocity;
+    	}
+    	else if (up) {
+    		velocityY = -Velocity;
+    	}
+    	this.setVelocity(velocityX, velocityY);
+    	// Only flip if we've got a velocity, otherwise, we want the flip to persist when the player's stopped
+    	if (velocityX || velocityY) {
+    		this.setFlipX(flipX);
+    	}
+    	else {
+    		currentAnimation = null;
+    	}
+    	if (currentAnimation) {
+    		anims.play(currentAnimation, true);
+    	}
+    	else {
+    		const previousAnimation = this.anims.getName();
+    		if (previousAnimation) {
+    			this.setFrame(this.anims.get(previousAnimation).frames[0].textureFrame);
     		}
     	}
+    	this.scene.playerState.currentAnimation = currentAnimation;
     }
 }
