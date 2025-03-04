@@ -50,10 +50,6 @@ export class PlayerState extends Phaser.Plugins.ScenePlugin {
     	};
     }
 
-    get playerDirection() {
-    	return this.player.anims.getName();
-    }
-
     constructor(scene: BaseScene, pluginManager: Phaser.Plugins.PluginManager, key: string) {
     	super(scene, pluginManager, key);
     	// TODOJEF: Do we need to clean up listeners?
@@ -102,23 +98,27 @@ export class PlayerState extends Phaser.Plugins.ScenePlugin {
     savePosition({ config, x, y }: Tile) {
     	const { Transition } = config;
     	if (Transition) {
-    		anim = this.playerDirection;
+    		const { up, down, left, right } = this.inputState;
     		// We +/- 1 below for each coordinate because we don't want them butting directly up against the collision box
     		// Traveling to the left
-    		if (anim === "left") {
+    		if (left) {
     			x = GridWidthPixels - CellSizeHalf - 1;
+    			anim = "left";
     		}
     		// Traveling to the right
-    		else if (anim === "right") {
+    		else if (right) {
     			x = CellSizeHalf + 1;
+    			anim = "right";
     		}
     		// Traveling up
-    		else if (anim === "up") {
+    		else if (up) {
     			y = GridHeightPixels - CellSizeHalf - 1;
+    			anim = "up";
     		}
     		// Traveling down
-    		else if (anim === "down") {
+    		else if (down) {
     			y = CellSizeHalf + 1;
+    			anim = "down";
     		}
     	}
     	this.playerPosition = {
