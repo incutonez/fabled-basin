@@ -41,7 +41,7 @@ export function replaceColors({ colors = [], image, texture, frame }: IReplaceCo
 			spacingY = 4;
 		}
 		/* The 2nd and 3rd params are the coords into the original spritesheet... the location of where our actual
-         * sprite starts.  The max horizontal frames is 9 and vertical is 6, so we have to mod these */
+     * sprite starts.  The max horizontal frames is 9 and vertical is 6, so we have to mod these */
 		ctx.drawImage(image, 16 * modifierX + spacingX * modifierX, 16 * modifierY + spacingY * modifierY, w, h, 0, 0, w, h);
 		const imageData = ctx.getImageData(0, 0, w, h);
 		const { data } = imageData;
@@ -49,7 +49,7 @@ export function replaceColors({ colors = [], image, texture, frame }: IReplaceCo
 			let found = false;
 			for (const color of colors) {
 				/* Return if we've already found the color we've replaced... otherwise, we could possibly be replacing
-		         * the color we just replaced if they chose that same color... */
+		     * the color we just replaced if they chose that same color... */
 				if (found || !color.value) {
 					continue;
 				}

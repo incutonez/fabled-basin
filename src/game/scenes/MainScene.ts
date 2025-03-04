@@ -13,7 +13,7 @@ export class MainScene extends Scene {
     }
 
     preload() {
-    	this.load.spritesheet("guy", "Gal.png", {
+    	this.load.spritesheet("player", "Gal.png", {
     		frameWidth: 32,
     		frameHeight: 32,
     	});

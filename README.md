@@ -4,7 +4,7 @@ I love the original NES Legend of Zelda, and I've tried writing it in [Unity](ht
 
 # Deployed Version
 
-You can view the deployed version [here](https://incutonez.github.io/legend-of-one-f/).  It's deployed using [GitHub Pages Deploy Action](https://github.com/JamesIves/github-pages-deploy-action).
+You can view the deployed version [here](https://incutonez.github.io/fable-basin/).  It's deployed using [GitHub Pages Deploy Action](https://github.com/JamesIves/github-pages-deploy-action).
 
 # Architecture
 

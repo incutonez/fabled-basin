@@ -10,7 +10,7 @@ export default class Player extends BaseSprite {
     scene: BaseScene;
     declare body: MatterJS.BodyType;
 
-    constructor(scene: BaseScene, x: number, y: number, texture = "guy") {
+    constructor(scene: BaseScene, x: number, y: number, texture = "player") {
     	super(scene.matter.world, x, y, texture);
     	this.scene = scene;
     	scene.add.existing(this);

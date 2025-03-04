@@ -1,15 +1,15 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref, unref, watch } from "vue";
-import { BaseButton } from "@incutonez/core-ui/dist/components";
+import { BaseButton } from "@incutonez/core-ui";
 import Phaser from "phaser";
 import { version } from "@/../package.json";
 import { EventBus } from "./EventBus";
-import { LegendOfJef } from "./main";
+import { FableBasin } from "./main";
 
 // TODOJEF: Add ability to edit the built game config in the app, where it reloads the game
 // Save the current scene instance
 const scene = ref();
-const game = ref<LegendOfJef>();
+const game = ref<FableBasin>();
 const debug = ref(true);
 const fileInputEl = ref<HTMLInputElement>();
 
@@ -43,7 +43,7 @@ watch(debug, ($debug) => {
 });
 
 onMounted(() => {
-	game.value = new LegendOfJef();
+	game.value = new FableBasin();
 	EventBus.on("current-scene-ready", (scene_instance: Phaser.Scene) => {
 		emit("current-active-scene", scene_instance);
 		scene.value = scene_instance;
