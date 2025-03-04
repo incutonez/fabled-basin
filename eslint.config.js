@@ -2,7 +2,6 @@ import pluginJs from "@eslint/js";
 import pluginIncutonez from "@incutonez/eslint-plugin";
 import stylisticTs from "@stylistic/eslint-plugin-ts";
 import pluginImport from "eslint-plugin-simple-import-sort";
-import tailwind from "eslint-plugin-tailwindcss";
 import pluginVue from "eslint-plugin-vue";
 import globals from "globals";
 import tseslint from "typescript-eslint";
@@ -23,8 +22,7 @@ export default [{
 },
 pluginJs.configs.recommended,
 ...tseslint.configs.recommended,
-...pluginVue.configs["flat/strongly-recommended"],
-...tailwind.configs["flat/recommended"], {
+...pluginVue.configs["flat/strongly-recommended"], {
 	files: ["**/*.vue"],
 	languageOptions: {
 		parserOptions: {
@@ -41,7 +39,6 @@ pluginJs.configs.recommended,
 	rules: {
 		"vue/html-indent": ["error", "tab"],
 		"vue/attributes-order": "error",
-		"tailwindcss/classnames-order": "error",
 		"quote-props": ["error", "as-needed"],
 		"padding-line-between-statements": ["error", {
 			blankLine: "always",

@@ -6,7 +6,7 @@ import Tile from "@/game/prefabs/Tile.ts";
 import { MainScene } from "@/game/scenes/MainScene.ts";
 import { OverworldScene } from "@/game/scenes/OverworldScene.ts";
 
-export class LegendOfJef extends Game {
+export class FabledBasin extends Game {
     currentScreen: {
     	x: number;
     	y: number;
@@ -67,7 +67,7 @@ export class LegendOfJef extends Game {
     			this.currentScreen.x = X;
     			this.currentScreen.y = Y;
     			const currentScene = tile.scene;
-    			const direction = currentScene.playerState.playerDirection;
+    			const { up, down, left, right } = currentScene.playerState.inputState;
     			const nextScene = currentScene.scene.get(`${this.currentScreen.x}${this.currentScreen.y}`) as OverworldScene;
     			const cam = currentScene.cameras.main;
     			const targetCam = nextScene.cameras.main;
@@ -82,25 +82,25 @@ export class LegendOfJef extends Game {
     				},
     				onUpdate(progress: number) {
     					const t = Phaser.Math.Easing.Quadratic.InOut(progress);
-    					if (direction === "left") {
+    					if (left) {
     						cam.setScroll(targetCam.x, targetCam.y);
     						cam.setViewport(t * GridWidthPixels, 0, (1 - t) * GridWidthPixels, cam.height);
     						targetCam.setViewport(0, 0, t * GridWidthPixels, targetCam.height);
     						targetCam.setScroll((1 - t) * GridWidthPixels, 0);
     					}
-    					else if (direction === "right") {
+    					else if (right) {
     						cam.setScroll(t * GridWidthPixels, 0);
     						cam.setViewport(0, 0, (1 - t) * GridWidthPixels, cam.height);
     						targetCam.setScroll(cam.x, cam.y);
     						targetCam.setViewport((1 - t) * GridWidthPixels, 0, t * GridWidthPixels, targetCam.height);
     					}
-    					else if (direction === "up") {
+    					else if (up) {
     						cam.setScroll(targetCam.x, targetCam.y);
     						cam.setViewport(0, t * GridHeightPixels, cam.width, (1 - t) * GridHeightPixels);
     						targetCam.setViewport(0, 0, targetCam.width, t * GridHeightPixels);
     						targetCam.setScroll(0, (1 - t) * GridHeightPixels);
     					}
-    					else if (direction === "down") {
+    					else if (down) {
     						cam.setScroll(0, t * GridHeightPixels);
     						cam.setViewport(0, 0, cam.width, (1 - t) * GridHeightPixels);
     						targetCam.setScroll(cam.x, cam.y);
