@@ -1,11 +1,11 @@
 {
-	"name": "@incutonez/fable-basin",
-	"description": "Fable Basin Phaser 3 Game",
+	"name": "@incutonez/fabled-basin",
+	"description": "Fabled Basin Phaser 3 Game",
 	"version": "1.6.1",
 	"type": "module",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/incutonez/fable-basin.git"
+		"url": "git+https://github.com/incutonez/fabled-basin.git"
 	},
 	"author": "incutonez@hotmail.com",
 	"license": "MIT",

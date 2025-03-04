@@ -6,7 +6,7 @@ import Tile from "@/game/prefabs/Tile.ts";
 import { MainScene } from "@/game/scenes/MainScene.ts";
 import { OverworldScene } from "@/game/scenes/OverworldScene.ts";
 
-export class FableBasin extends Game {
+export class FabledBasin extends Game {
     currentScreen: {
     	x: number;
     	y: number;

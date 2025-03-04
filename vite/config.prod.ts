@@ -4,7 +4,7 @@ import { fileURLToPath, URL } from "node:url";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-	base: "/fable-basin/",
+	base: "/fabled-basin/",
 	plugins: [vue(), tailwindcss()],
 	resolve: {
 		alias: {
