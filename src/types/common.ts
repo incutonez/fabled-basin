@@ -1,3 +1,4 @@
+import { IOption } from "@incutonez/core-ui/types";
 import { TTiles } from "@/enums/Tiles.ts";
 import { TWorldColors } from "@/enums/WorldColors.ts";
 
@@ -5,11 +6,17 @@ import Vector2Like = Phaser.Types.Math.Vector2Like;
 
 export type ITileShape = Vector2Like;
 
+export interface IGameEnum extends IOption {
+	imageSrc?: string;
+	displayName?: string;
+}
+
 export interface ITile {
 	id: number;
 	name?: string;
 	displayName?: string;
 	shape?: ITileShape[];
+	imageSrc?: string;
 	[key: string]: unknown;
 }
 

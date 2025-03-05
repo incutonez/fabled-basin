@@ -19,7 +19,7 @@ export class OverworldScene extends BaseScene {
     	this.config.Tiles.forEach(({ Type, Children }) => {
     		const found = Tiles.find(({ name }) => Type === name);
     		if (found) {
-    			tileBuilder(this, "tiles", Children, found);
+    			tileBuilder(this, Children, found);
     		}
     	});
     	EventBus.emit("current-scene-ready", this);
