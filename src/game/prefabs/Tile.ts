@@ -3,16 +3,16 @@ import { WorldColors } from "@/enums/WorldColors.ts";
 import { CellSizeHalf } from "@/game/globals.ts";
 import { BaseScene } from "@/game/scenes/BaseScene.ts";
 import { replaceColors } from "@/game/utils.ts";
-import { BaseSprite, IScreenTileChild, ITile, ITileShape } from "@/types/common.ts";
+import { BaseSprite, IGameObject, IScreenTileChild, ITileShape } from "@/types/common.ts";
 
 export interface IWall {
 	scene: BaseScene;
 	child: IScreenTileChild;
-	tile: ITile;
+	tile: IGameObject;
 }
 
 export default class Tile extends BaseSprite {
-    tile: ITile;
+    tile: IGameObject;
     config: IScreenTileChild;
     declare scene: BaseScene;
 
@@ -83,7 +83,7 @@ export default class Tile extends BaseSprite {
     }
 }
 
-export function tileBuilder(scene: BaseScene, children: IScreenTileChild[], tile: ITile) {
+export function tileBuilder(scene: BaseScene, children: IScreenTileChild[], tile: IGameObject) {
 	return children.map((child) => {
 		return new Tile({
 			scene,

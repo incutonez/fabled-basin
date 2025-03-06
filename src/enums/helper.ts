@@ -1,19 +1,19 @@
-import { type IOption } from "@incutonez/core-ui/types";
+import { IGameEnum, IGameObject } from "@/types/common.ts";
 
-export const HasAPI = import.meta.env.MODE !== "GitHubPages";
+type IFindRecord = IGameEnum[] | IGameObject[]
 
-export function findRecord(enums: IOption[], value?: string | number) {
+export function findRecord(enums: IFindRecord, value?: string | number) {
 	return enums.find((record) => record.id === value);
 }
 
-export function findRecordByName(enums: IOption[], value?: string | number) {
+export function findRecordByName(enums: IFindRecord, value?: string | number) {
 	return enums.find((record) => record.name === value);
 }
 
-export function getIdByName(enums: IOption[], value?: string | number) {
+export function getIdByName(enums: IFindRecord, value?: string | number) {
 	return findRecordByName(enums, value)?.id;
 }
 
-export function getNameById(enums: IOption[], value?: string | number) {
+export function getNameById(enums: IFindRecord, value?: string | number) {
 	return findRecord(enums, value)?.name;
 }

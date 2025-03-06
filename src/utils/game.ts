@@ -1,11 +1,11 @@
 import { toInt } from "@incutonez/core-ui/utils";
 import { GameTargetColor } from "@/models/GameTargetColor";
-import { IGameEnum } from "@/types/common.ts";
+import { IGameObject } from "@/types/common.ts";
 
 const ImageCache: Record<string, HTMLImageElement> = {};
 
 interface IReplaceColors {
-	imageEnum: IGameEnum;
+	imageEnum: IGameObject;
 	colors: GameTargetColor[];
 }
 

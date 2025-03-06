@@ -5,7 +5,7 @@ import { ModelTransform } from "@/models/decorators";
 import { GameTargetColor } from "@/models/GameTargetColor";
 import { GameTileCell } from "@/models/GameTileCell";
 import { ViewModel } from "@/models/ViewModel";
-import { type IGameEnum } from "@/types/common";
+import { IGameObject } from "@/types/common";
 import { replaceColors } from "@/utils/game";
 
 export interface IGameWorldObjectConfig {
@@ -25,7 +25,7 @@ export class GameWorldObject extends ViewModel {
   cell?: GameTileCell;
 
   @IsObject()
-  type: IGameEnum = {};
+  type?: IGameObject;
 
   @IsArray()
   @ModelTransform(() => GameTargetColor)
@@ -75,7 +75,7 @@ export class GameWorldObject extends ViewModel {
   	if (this.hasImage()) {
   		this.src = await replaceColors({
   			colors: this.Colors,
-  			imageEnum: this.Type,
+  			imageEnum: this.Type!,
   		});
   	}
   }
@@ -95,12 +95,14 @@ export class GameWorldObject extends ViewModel {
   }
 
   reset() {
-  	this.Type = {};
+  	this.Type = undefined;
   }
 
   getTypeKey(type = this.Type) {
-  	const { id } = type;
-  	return this.enumCollection.find((item) => item.id === id)?.name;
+  	if (type) {
+  		const { id } = type;
+  		return this.enumCollection.find((item) => item.id === id)?.name;
+  	}
   }
 
   /**

@@ -39,296 +39,296 @@ import { default as ImageItemsSwordWhite } from "@/assets/Items/SwordWhite.png";
 import { default as ImageItemsTriforceShard } from "@/assets/Items/TriforceShard.png";
 import { default as ImageItemsTriforceShardAlt } from "@/assets/Items/TriforceShardAlt.png";
 import { default as ImageItemsWand } from "@/assets/Items/Wand.png";
-import { IGameEnum } from "@/types/common.ts";
+import { IGameObject } from "@/types/common.ts";
 
-export const ItemsNone: IGameEnum = {
+export const ItemsNone: IGameObject = {
 	displayName: "None",
 	name: "None",
 	id: 0,
 	imageSrc: ImageItemsNone,
 };
 
-export const ItemsArrow: IGameEnum = {
+export const ItemsArrow: IGameObject = {
 	displayName: "Arrow",
 	name: "Arrow",
 	id: 1,
 	imageSrc: ImageItemsArrow,
 };
 
-export const ItemsArrowSilver: IGameEnum = {
+export const ItemsArrowSilver: IGameObject = {
 	displayName: "Arrow Silver",
 	name: "ArrowSilver",
 	id: 2,
 	imageSrc: ImageItemsArrowSilver,
 };
 
-export const ItemsBomb: IGameEnum = {
+export const ItemsBomb: IGameObject = {
 	displayName: "Bomb",
 	name: "Bomb",
 	id: 3,
 	imageSrc: ImageItemsBomb,
 };
 
-export const ItemsBoomerang: IGameEnum = {
+export const ItemsBoomerang: IGameObject = {
 	displayName: "Boomerang",
 	name: "Boomerang",
 	id: 4,
 	imageSrc: ImageItemsBoomerang,
 };
 
-export const ItemsBoomerangMagical: IGameEnum = {
+export const ItemsBoomerangMagical: IGameObject = {
 	displayName: "Boomerang Magical",
 	name: "BoomerangMagical",
 	id: 5,
 	imageSrc: ImageItemsBoomerangMagical,
 };
 
-export const ItemsBow: IGameEnum = {
+export const ItemsBow: IGameObject = {
 	displayName: "Bow",
 	name: "Bow",
 	id: 6,
 	imageSrc: ImageItemsBow,
 };
 
-export const ItemsCandle: IGameEnum = {
+export const ItemsCandle: IGameObject = {
 	displayName: "Candle",
 	name: "Candle",
 	id: 7,
 	imageSrc: ImageItemsCandle,
 };
 
-export const ItemsCandleRed: IGameEnum = {
+export const ItemsCandleRed: IGameObject = {
 	displayName: "Candle Red",
 	name: "CandleRed",
 	id: 8,
 	imageSrc: ImageItemsCandleRed,
 };
 
-export const ItemsClock: IGameEnum = {
+export const ItemsClock: IGameObject = {
 	displayName: "Clock",
 	name: "Clock",
 	id: 9,
 	imageSrc: ImageItemsClock,
 };
 
-export const ItemsCompass: IGameEnum = {
+export const ItemsCompass: IGameObject = {
 	displayName: "Compass",
 	name: "Compass",
 	id: 10,
 	imageSrc: ImageItemsCompass,
 };
 
-export const ItemsFlute: IGameEnum = {
+export const ItemsFlute: IGameObject = {
 	displayName: "Flute",
 	name: "Flute",
 	id: 11,
 	imageSrc: ImageItemsFlute,
 };
 
-export const ItemsFood: IGameEnum = {
+export const ItemsFood: IGameObject = {
 	displayName: "Food",
 	name: "Food",
 	id: 12,
 	imageSrc: ImageItemsFood,
 };
 
-export const ItemsHeart: IGameEnum = {
+export const ItemsHeart: IGameObject = {
 	displayName: "Heart",
 	name: "Heart",
 	id: 13,
 	imageSrc: ImageItemsHeart,
 };
 
-export const ItemsHeartHalf: IGameEnum = {
+export const ItemsHeartHalf: IGameObject = {
 	displayName: "Heart Half",
 	name: "HeartHalf",
 	id: 130,
 	imageSrc: ImageItemsHeartHalf,
 };
 
-export const ItemsHeartEmpty: IGameEnum = {
+export const ItemsHeartEmpty: IGameObject = {
 	displayName: "Heart Empty",
 	name: "HeartEmpty",
 	id: 131,
 	imageSrc: ImageItemsHeartEmpty,
 };
 
-export const ItemsHeartAlt: IGameEnum = {
+export const ItemsHeartAlt: IGameObject = {
 	displayName: "Heart Alt",
 	name: "HeartAlt",
 	id: 133,
 	imageSrc: ImageItemsHeartAlt,
 };
 
-export const ItemsHeartContainer: IGameEnum = {
+export const ItemsHeartContainer: IGameObject = {
 	displayName: "Heart Container",
 	name: "HeartContainer",
 	id: 14,
 	imageSrc: ImageItemsHeartContainer,
 };
 
-export const ItemsKey: IGameEnum = {
+export const ItemsKey: IGameObject = {
 	displayName: "Key",
 	name: "Key",
 	id: 15,
 	imageSrc: ImageItemsKey,
 };
 
-export const ItemsKeySkeleton: IGameEnum = {
+export const ItemsKeySkeleton: IGameObject = {
 	displayName: "Key Skeleton",
 	name: "KeySkeleton",
 	id: 16,
 	imageSrc: ImageItemsKeySkeleton,
 };
 
-export const ItemsLadder: IGameEnum = {
+export const ItemsLadder: IGameObject = {
 	displayName: "Ladder",
 	name: "Ladder",
 	id: 17,
 	imageSrc: ImageItemsLadder,
 };
 
-export const ItemsLetter: IGameEnum = {
+export const ItemsLetter: IGameObject = {
 	displayName: "Letter",
 	name: "Letter",
 	id: 18,
 	imageSrc: ImageItemsLetter,
 };
 
-export const ItemsMagicBook: IGameEnum = {
+export const ItemsMagicBook: IGameObject = {
 	displayName: "Magic Book",
 	name: "MagicBook",
 	id: 19,
 	imageSrc: ImageItemsMagicBook,
 };
 
-export const ItemsMap: IGameEnum = {
+export const ItemsMap: IGameObject = {
 	displayName: "Map",
 	name: "Map",
 	id: 20,
 	imageSrc: ImageItemsMap,
 };
 
-export const ItemsPotionBlue: IGameEnum = {
+export const ItemsPotionBlue: IGameObject = {
 	displayName: "Potion Blue",
 	name: "PotionBlue",
 	id: 21,
 	imageSrc: ImageItemsPotionBlue,
 };
 
-export const ItemsPotionRed: IGameEnum = {
+export const ItemsPotionRed: IGameObject = {
 	displayName: "Potion Red",
 	name: "PotionRed",
 	id: 22,
 	imageSrc: ImageItemsPotionRed,
 };
 
-export const ItemsPowerBracelet: IGameEnum = {
+export const ItemsPowerBracelet: IGameObject = {
 	displayName: "Power Bracelet",
 	name: "PowerBracelet",
 	id: 23,
 	imageSrc: ImageItemsPowerBracelet,
 };
 
-export const ItemsRaft: IGameEnum = {
+export const ItemsRaft: IGameObject = {
 	displayName: "Raft",
 	name: "Raft",
 	id: 24,
 	imageSrc: ImageItemsRaft,
 };
 
-export const ItemsRingBlue: IGameEnum = {
+export const ItemsRingBlue: IGameObject = {
 	displayName: "Ring Blue",
 	name: "RingBlue",
 	id: 25,
 	imageSrc: ImageItemsRingBlue,
 };
 
-export const ItemsRingGreen: IGameEnum = {
+export const ItemsRingGreen: IGameObject = {
 	displayName: "Ring Green",
 	name: "RingGreen",
 	id: 26,
 	imageSrc: ImageItemsRingGreen,
 };
 
-export const ItemsRingRed: IGameEnum = {
+export const ItemsRingRed: IGameObject = {
 	displayName: "Ring Red",
 	name: "RingRed",
 	id: 27,
 	imageSrc: ImageItemsRingRed,
 };
 
-export const ItemsRupeeFive: IGameEnum = {
+export const ItemsRupeeFive: IGameObject = {
 	displayName: "Rupee Five",
 	name: "RupeeFive",
 	id: 28,
 	imageSrc: ImageItemsRupeeFive,
 };
 
-export const ItemsRupeeOne: IGameEnum = {
+export const ItemsRupeeOne: IGameObject = {
 	displayName: "Rupee One",
 	name: "RupeeOne",
 	id: 29,
 	imageSrc: ImageItemsRupeeOne,
 };
 
-export const ItemsShield: IGameEnum = {
+export const ItemsShield: IGameObject = {
 	displayName: "Shield",
 	name: "Shield",
 	id: 30,
 	imageSrc: ImageItemsShield,
 };
 
-export const ItemsShieldMagical: IGameEnum = {
+export const ItemsShieldMagical: IGameObject = {
 	displayName: "Shield Magical",
 	name: "ShieldMagical",
 	id: 31,
 	imageSrc: ImageItemsShieldMagical,
 };
 
-export const ItemsSword: IGameEnum = {
+export const ItemsSword: IGameObject = {
 	displayName: "Sword",
 	name: "Sword",
 	id: 32,
 	imageSrc: ImageItemsSword,
 };
 
-export const ItemsSwordWhite: IGameEnum = {
+export const ItemsSwordWhite: IGameObject = {
 	displayName: "Sword White",
 	name: "SwordWhite",
 	id: 33,
 	imageSrc: ImageItemsSwordWhite,
 };
 
-export const ItemsSwordMagical: IGameEnum = {
+export const ItemsSwordMagical: IGameObject = {
 	displayName: "Sword Magical",
 	name: "SwordMagical",
 	id: 34,
 	imageSrc: ImageItemsSwordMagical,
 };
 
-export const ItemsTriforceShard: IGameEnum = {
+export const ItemsTriforceShard: IGameObject = {
 	displayName: "Triforce Shard",
 	name: "TriforceShard",
 	id: 35,
 	imageSrc: ImageItemsTriforceShard,
 };
 
-export const ItemsTriforceShardAlt: IGameEnum = {
+export const ItemsTriforceShardAlt: IGameObject = {
 	displayName: "Triforce Shard Alt",
 	name: "TriforceShardAlt",
 	id: 355,
 	imageSrc: ImageItemsTriforceShardAlt,
 };
 
-export const ItemsWand: IGameEnum = {
+export const ItemsWand: IGameObject = {
 	displayName: "Wand",
 	name: "Wand",
 	id: 36,
 	imageSrc: ImageItemsWand,
 };
 
-export const Items: IGameEnum[] = [
+export const Items: IGameObject[] = [
 	ItemsNone,
 	ItemsArrow,
 	ItemsArrowSilver,

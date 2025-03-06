@@ -104,7 +104,7 @@ export class GameScreen extends ViewModel {
 				for (const child of tile.Children) {
 					if (child.X === x && child.Y === y) {
 						found = true;
-						const foundTile = EnumTiles.find((item) => item.Type === tile.Type);
+						const foundTile = findRecordByName(EnumTiles, tile.Type);
 						const tileColors = getDefaultTileColors(foundTile!);
 						const { Colors } = child;
 						if (Colors) {
@@ -140,7 +140,7 @@ export class GameScreen extends ViewModel {
 					removeItem(Items, item);
 					const itemType = item.Config.Type;
 					cell.item.set({
-						Type: EnumItems.find((record) => record.Type === itemType),
+						Type: findRecordByName(EnumItems, itemType),
 					});
 					break;
 				}

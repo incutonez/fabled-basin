@@ -1,4 +1,5 @@
-﻿import { isEmpty } from "@incutonez/core-ui/utils";
+﻿import { IViewModel } from "@incutonez/core-ui/types";
+import { isEmpty } from "@incutonez/core-ui/utils";
 import { Allow, IsArray, IsNumber, IsObject, IsString } from "class-validator";
 import { getNameById } from "@/enums/helper";
 import {
@@ -72,8 +73,8 @@ import { GameScreen } from "@/models/GameScreen";
 import { GameTargetColor } from "@/models/GameTargetColor";
 import { GameTileCell } from "@/models/GameTileCell";
 import { IGameWorldObjectConfig } from "@/models/GameWorldObject";
-import { IViewModel, ViewModel } from "@/models/ViewModel";
-import { type IGameEnum } from "@/types/common";
+import { ViewModel } from "@/models/ViewModel";
+import { type IGameEnum, IGameObject } from "@/types/common";
 import { replaceColors } from "@/utils/game";
 
 const TransitionTypes = [TilesTransition.name, TilesSolid.name];
@@ -99,7 +100,7 @@ const White = [WorldColorsWhitePure];
 const WhiteBlue = [WorldColorsWhitePure, WorldColorsBluePure];
 const WhiteBlack = [WorldColorsWhitePure, WorldColorsBlack];
 
-export function getDefaultTileColors(type: IGameEnum) {
+export function getDefaultTileColors(type?: IGameObject) {
 	let colors: IGameEnum[] | IGameEnum[][] = [];
 	switch (type) {
 		// TODOJEF: Add color change for these?
@@ -213,7 +214,7 @@ export class GameTile extends ViewModel {
 
 	// TODOJEF: Make this a proper enum?
 	@IsObject()
-	type: IGameEnum = {};
+	type?: IGameObject;
 
 	@IsArray()
 	@ModelTransform(() => GameTargetColor)
@@ -239,11 +240,11 @@ export class GameTile extends ViewModel {
 	}
 
 	get isDoor() {
-		return this.Type.name === TilesSolid.name;
+		return this.Type?.name === TilesSolid.name;
 	}
 
 	get isTransition() {
-		return TransitionTypes.indexOf(this.Type.name) !== -1;
+		return this.Type && TransitionTypes.indexOf(this.Type.name) !== -1;
 	}
 
 	/**
@@ -259,7 +260,7 @@ export class GameTile extends ViewModel {
    * is due to having to redefine both the set AND get if you change one or the other.
    * Ref: https://stackoverflow.com/q/28950760/1253609
    */
-	set Type(value: IGameEnum) {
+	set Type(value) {
 		this.type = value;
 		this.Colors = getDefaultTileColors(value);
 		if (this.isTransition) {
@@ -280,18 +281,18 @@ export class GameTile extends ViewModel {
 	}
 
 	getTypeKey() {
-		return getNameById(Tiles, this.Type.id)?.replace("Tiles", "");
+		return getNameById(Tiles, this.Type?.id)?.replace("Tiles", "");
 	}
 
 	hasImage() {
-		return !(isEmpty(this.Type) || this.Type.id === TilesNone.id);
+		return !(isEmpty(this.Type) || this.Type!.id === TilesNone.id);
 	}
 
 	async updateImage() {
 		if (this.hasImage()) {
 			this.src = await replaceColors({
 				colors: this.Colors,
-				imageEnum: this.Type,
+				imageEnum: this.Type!,
 			});
 		}
 		else {
