@@ -22,6 +22,7 @@ import WorldConfigPanel from "@/views/gameWorldBuilder/WorldConfigPanel.vue";
 
 /**
  * TODOJEF:
+ * - Add saving to local storage every x seconds
  * - I think I need to rework the JSON output... it should output the entire world in a single JSON, and load it that way...
  * -- This is because I think it'll eventually get shoved into a DB
  * - Add special properties for Transitions
@@ -191,6 +192,7 @@ provideCellCopy();
 	<article class="flex h-full space-x-4 p-4">
 		<TileGrid
 			v-model:selected-cell="selectedCell"
+			class="flex-1"
 			:cells="selectedScreen?.cells"
 			:total-columns="selectedScreen?.totalColumns ?? 11"
 			:total-rows="selectedScreen?.totalRows ?? 16"

@@ -3,8 +3,9 @@ import { onMounted, onUnmounted, ref, unref, watch } from "vue";
 import { BaseButton } from "@incutonez/core-ui";
 import Phaser from "phaser";
 import { version } from "@/../package.json";
-import { EventBus } from "./EventBus";
-import { FabledBasin } from "./main";
+import { EventBus } from "@/game/EventBus.ts";
+import { FabledBasin } from "@/game/main.ts";
+import { viewWorldBuilder } from "@/router.ts";
 
 // TODOJEF: Add ability to edit the built game config in the app, where it reloads the game
 // Save the current scene instance
@@ -14,6 +15,10 @@ const debug = ref(true);
 const fileInputEl = ref<HTMLInputElement>();
 
 const emit = defineEmits(["current-active-scene"]);
+
+function onClickWorldBuilder() {
+	viewWorldBuilder();
+}
 
 function onClickLoadWorld() {
 	fileInputEl.value?.click();
@@ -67,11 +72,10 @@ defineExpose({
 		<section id="game-container" />
 		<section class="flex flex-1 flex-col bg-black font-semibold text-white">
 			<div class="flex flex-col items-start space-y-2 p-2">
-				<a
-					href="http://incutonez.github.io/Sandbox/#/game"
-					class="text-sky-500 underline"
-					target="_blank"
-				>World Builder</a>
+				<BaseButton
+					text="World Builder"
+					@click="onClickWorldBuilder"
+				/>
 				<BaseButton
 					text="Load World"
 					@click="onClickLoadWorld"

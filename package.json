@@ -24,12 +24,14 @@
 		"prepare": "husky"
 	},
 	"dependencies": {
-		"@incutonez/core-ui": "^2.1.0",
+		"@incutonez/core-ui": "^3.0.13",
 		"class-transformer": "^0.5.1",
 		"class-validator": "^0.14.1",
 		"lodash-es": "^4.17.21",
 		"phaser": "^3.88.2",
-		"vue": "^3.5.13"
+		"reflect-metadata": "^0.2.2",
+		"vue": "^3.5.13",
+		"vue-router": "^4.5.0"
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.21.0",

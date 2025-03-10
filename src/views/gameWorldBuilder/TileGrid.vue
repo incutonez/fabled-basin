@@ -180,7 +180,7 @@ watch(() => pressedKeys.paste, (value) => {
 </script>
 
 <template>
-	<div
+	<article
 		ref="rootEl"
 		class="base-grid"
 		v-bind="$attrs"
@@ -225,7 +225,7 @@ watch(() => pressedKeys.paste, (value) => {
 				>
 			</div>
 		</div>
-	</div>
+	</article>
 	<BaseContextMenu
 		ref="contextMenu"
 		:items="contextItems"

@@ -1,5 +1,52 @@
-@import "tailwindcss";
+@import "@incutonez/core-ui/theme.css";
 
 html, body, #app {
     @apply size-full;
+}
+
+@layer components {
+	.table-hide-headers table thead tr {
+		@apply hidden bg-transparent;
+	}
+
+	.base-grid {
+		@apply grid grow grid-rows-11 grid-cols-16;
+	}
+
+	.grid-cell {
+		@apply text-center hover:bg-select-200 border-gray-500 cursor-pointer;
+	}
+
+	.grid-cell-hover {
+		@apply bg-select-200;
+	}
+
+	.grid-cell-selected {
+		@apply bg-blue-200;
+	}
+
+	.grid-show-lines .grid-cell {
+		@apply border-t border-l;
+	}
+
+	/* Target last column */
+	.grid-show-lines .grid-cell:nth-child(16n+16) {
+		@apply border-r;
+	}
+
+	/* Taken from https:keithclark.co.uk/articles/targeting-first-and-last-rows-in-css-grid-layouts/ */
+	/* Target last row, which is considered the first row due to the grid's starting position... 0,0 is bottom left */
+	.grid-show-lines:not(.grid-origin-top-left) .grid-cell:nth-child(-n+16) {
+		@apply border-b;
+	}
+
+	/* Taken from https:keithclark.co.uk/articles/targeting-first-and-last-rows-in-css-grid-layouts/ */
+	/* Target last row, which is considered the first row due to the grid's starting position... 0,0 is bottom left */
+	.grid-show-lines.grid-origin-top-left .grid-cell:nth-last-child(-n+16) {
+		@apply border-b;
+	}
+
+	.base-card-title {
+		@apply text-gray-900 leading-6;
+	}
 }
