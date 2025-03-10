@@ -7,7 +7,7 @@ export interface IReplaceColors {
 	}[];
 	image: HTMLImageElement;
 	texture: CanvasTexture;
-	frame: number;
+	frame?: number;
 }
 
 const HexRegex = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i;
@@ -25,7 +25,7 @@ function hexToRgb(hex = "") {
 	};
 }
 
-export function replaceColors({ colors = [], image, texture, frame }: IReplaceColors) {
+export function replaceColors({ colors = [], image, texture, frame = 0 }: IReplaceColors) {
 	const ctx = texture.context;
 	if (ctx && image) {
 		const w = 16;

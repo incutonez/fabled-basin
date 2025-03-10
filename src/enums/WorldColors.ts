@@ -1,186 +1,186 @@
-import { IWorldColor } from "@/types/common.ts";
+import { IGameEnum } from "@/types/common.ts";
 
-export const WorldColorsNone = {
+export const WorldColorsNone: IGameEnum = {
 	displayName: "None",
 	name: "None",
 	id: "Transparent",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColorsBlack = {
+export const WorldColorsBlack: IGameEnum = {
 	displayName: "Black",
 	name: "Black",
 	id: "000000",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColorsBlue = {
+export const WorldColorsBlue: IGameEnum = {
 	displayName: "Blue",
 	name: "Blue",
 	id: "0000bc",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColorsBlueLight = {
+export const WorldColorsBlueLight: IGameEnum = {
 	displayName: "Blue Light",
 	name: "BlueLight",
 	id: "6888ff",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColorsBluePure = {
+export const WorldColorsBluePure: IGameEnum = {
 	displayName: "Blue Pure",
 	name: "BluePure",
 	id: "0000FF",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColorsBlueWater = {
+export const WorldColorsBlueWater: IGameEnum = {
 	displayName: "Blue Water",
 	name: "BlueWater",
 	id: "2038ec",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColorsBrown = {
+export const WorldColorsBrown: IGameEnum = {
 	displayName: "Brown",
 	name: "Brown",
 	id: "c84c0c",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColorsBrownButter = {
+export const WorldColorsBrownButter: IGameEnum = {
 	displayName: "Brown Butter",
 	name: "BrownButter",
 	id: "ac7c00",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColorsBrownDark = {
+export const WorldColorsBrownDark: IGameEnum = {
 	displayName: "Brown Dark",
 	name: "BrownDark",
 	id: "503000",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColorsBrownLight = {
+export const WorldColorsBrownLight: IGameEnum = {
 	displayName: "Brown Light",
 	name: "BrownLight",
 	id: "f8b800",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColorsGray = {
+export const WorldColorsGray: IGameEnum = {
 	displayName: "Gray",
 	name: "Gray",
 	id: "7c7c7c",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColorsGreen = {
+export const WorldColorsGreen: IGameEnum = {
 	displayName: "Green",
 	name: "Green",
 	id: "00a800",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColorsGreenDark = {
+export const WorldColorsGreenDark: IGameEnum = {
 	displayName: "Green Dark",
 	name: "GreenDark",
 	id: "005800",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColorsGreenLight = {
+export const WorldColorsGreenLight: IGameEnum = {
 	displayName: "Green Light",
 	name: "GreenLight",
 	id: "58f898",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColorsGreenPure = {
+export const WorldColorsGreenPure: IGameEnum = {
 	displayName: "Green Pure",
 	name: "GreenPure",
 	id: "00FF00",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColorsLime = {
+export const WorldColorsLime: IGameEnum = {
 	displayName: "Lime",
 	name: "Lime",
 	id: "b8f818",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColorsOrange = {
+export const WorldColorsOrange: IGameEnum = {
 	displayName: "Orange",
 	name: "Orange",
 	id: "FFA044",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColorsOrangeDark = {
+export const WorldColorsOrangeDark: IGameEnum = {
 	displayName: "Orange Dark",
 	name: "OrangeDark",
 	id: "e45c10",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColorsPeach = {
+export const WorldColorsPeach: IGameEnum = {
 	displayName: "Peach",
 	name: "Peach",
 	id: "fcd8a8",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColorsPurpleLight = {
+export const WorldColorsPurpleLight: IGameEnum = {
 	displayName: "Purple Light",
 	name: "PurpleLight",
 	id: "b8b8f8",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColorsQ1C1Accent = {
+export const WorldColorsQ1C1Accent: IGameEnum = {
 	displayName: "Q 1 C 1 Accent",
 	name: "Q1C1Accent",
 	id: "008088",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColorsQ1C1Door = {
+export const WorldColorsQ1C1Door: IGameEnum = {
 	displayName: "Q 1 C 1 Door",
 	name: "Q1C1Door",
 	id: "183c5c",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColorsRed = {
+export const WorldColorsRed: IGameEnum = {
 	displayName: "Red",
 	name: "Red",
 	id: "F83800",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColorsRedPure = {
+export const WorldColorsRedPure: IGameEnum = {
 	displayName: "Red Pure",
 	name: "RedPure",
 	id: "FF0000",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColorsTan = {
+export const WorldColorsTan: IGameEnum = {
 	displayName: "Tan",
 	name: "Tan",
 	id: "FFEFA6",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColorsTeal = {
+export const WorldColorsTeal: IGameEnum = {
 	displayName: "Teal",
 	name: "Teal",
 	id: "008888",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColorsTealLight = {
+export const WorldColorsTealLight: IGameEnum = {
 	displayName: "Teal Light",
 	name: "TealLight",
 	id: "00e8d8",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColorsTealDark = {
+export const WorldColorsTealDark: IGameEnum = {
 	displayName: "Teal Dark",
 	name: "TealDark",
 	id: "004058",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColorsWhite = {
+export const WorldColorsWhite: IGameEnum = {
 	displayName: "White",
 	name: "White",
 	id: "fcfcfc",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColorsWhitePure = {
+export const WorldColorsWhitePure: IGameEnum = {
 	displayName: "White Pure",
 	name: "WhitePure",
 	id: "FFFFFF",
-} as const satisfies IWorldColor;
+};
 
-export const WorldColors = [
+export const WorldColors: IGameEnum[] = [
 	WorldColorsNone,
 	WorldColorsBlack,
 	WorldColorsBlue,

@@ -1,5 +1,6 @@
 import { Scene } from "phaser";
 import game from "@/assets/game.json";
+import { Tiles } from "@/enums/Tiles.ts";
 import { EventBus } from "@/game/EventBus.ts";
 import { PlayerState } from "@/game/prefabs/PlayerState.ts";
 import { OverworldScene } from "@/game/scenes/OverworldScene.ts";
@@ -17,11 +18,11 @@ export class MainScene extends Scene {
     		frameWidth: 32,
     		frameHeight: 32,
     	});
-    	this.load.spritesheet("tiles", "tiles.png", {
-    		frameWidth: 16,
-    		frameHeight: 16,
-    		spacing: 4,
-    	});
+    	for (const tile of Tiles) {
+    		if (tile.imageSrc) {
+    			this.load.image(`tiles_${tile.name!}`, tile.imageSrc);
+    		}
+    	}
     	this.cache.json.add("game", game);
     }
 

@@ -103,12 +103,12 @@ export class PlayerState extends Phaser.Plugins.ScenePlugin {
     		// Traveling to the left
     		if (left) {
     			x = GridWidthPixels - CellSizeHalf - 1;
-    			anim = "left";
+    			anim = "walk";
     		}
     		// Traveling to the right
     		else if (right) {
     			x = CellSizeHalf + 1;
-    			anim = "right";
+    			anim = "walk";
     		}
     		// Traveling up
     		else if (up) {

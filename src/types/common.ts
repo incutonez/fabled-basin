@@ -5,12 +5,19 @@ import Vector2Like = Phaser.Types.Math.Vector2Like;
 
 export type ITileShape = Vector2Like;
 
-export interface ITile {
-	id: number;
-	name?: string;
+/**
+ * TODOJEF: May want to consider splitting this from each usage... e.g. it's used for Colors, Templates, Audio, and
+ * Animations.  Probably want an interface enum for each of those, instead of reusing the same one.
+ */
+export interface IGameEnum {
+	id: string | number;
+	name: string;
 	displayName?: string;
+}
+
+export interface IGameObject extends IGameEnum {
 	shape?: ITileShape[];
-	[key: string]: unknown;
+	imageSrc?: string;
 }
 
 export interface IWorldColor {
