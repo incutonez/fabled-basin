@@ -11,7 +11,7 @@ import { viewWorldBuilder } from "@/router.ts";
 // Save the current scene instance
 const scene = ref();
 const game = ref<FabledBasin>();
-const debug = ref(true);
+const debug = ref(false);
 const fileInputEl = ref<HTMLInputElement>();
 
 const emit = defineEmits(["current-active-scene"]);
@@ -35,23 +35,26 @@ function onChangeLoadFile() {
 	}
 }
 
-watch(debug, ($debug) => {
+function toggleDebug() {
 	const $game = unref(game);
 	if ($game) {
 		$game.scene.scenes.forEach((scene) => {
 			if (scene.matter.world) {
-				scene.matter.world.drawDebug = $debug;
+				scene.matter.world.drawDebug = debug.value;
 				scene.matter.world.debugGraphic.clear();
 			}
 		});
 	}
-});
+}
+
+watch(debug, () => toggleDebug());
 
 onMounted(() => {
 	game.value = new FabledBasin();
 	EventBus.on("current-scene-ready", (scene_instance: Phaser.Scene) => {
 		emit("current-active-scene", scene_instance);
 		scene.value = scene_instance;
+		toggleDebug();
 	});
 });
 
