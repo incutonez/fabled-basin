@@ -1,3 +1,9 @@
+## [2.1.1](https://github.com/incutonez/fabled-basin/compare/v2.1.0...v2.1.1) (2025-04-20)
+
+### Bug Fixes
+
+* Adding Google Meta Tag ([#32](https://github.com/incutonez/fabled-basin/issues/32)) ([95626bc](https://github.com/incutonez/fabled-basin/commit/95626bcafbcb00befe81dbfc956010cccef7665f))
+
 ## [2.1.0](https://github.com/incutonez/fabled-basin/compare/v2.0.0...v2.1.0) (2025-03-10)
 
 ### Features
