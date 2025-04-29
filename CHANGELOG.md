@@ -1,3 +1,10 @@
+## [2.1.2](https://github.com/incutonez/fabled-basin/compare/v2.1.1...v2.1.2) (2025-04-29)
+
+### Bug Fixes
+
+* Adding Default World and Screen Selection ([#33](https://github.com/incutonez/fabled-basin/issues/33)) ([22c2e27](https://github.com/incutonez/fabled-basin/commit/22c2e2702d8be161703d314a6030fa00b8984c6c))
+* Adding Default World and Screen Selection ([#33](https://github.com/incutonez/fabled-basin/issues/33)) ([ef7c564](https://github.com/incutonez/fabled-basin/commit/ef7c564193e7d62a7948226574e2d9e148f7a939))
+
 ## [2.1.1](https://github.com/incutonez/fabled-basin/compare/v2.1.0...v2.1.1) (2025-04-20)
 
 ### Bug Fixes
