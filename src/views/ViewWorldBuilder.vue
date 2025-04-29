@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, reactive, ref, unref, watch } from "vue";
+import { computed, onMounted, reactive, ref, unref, watch } from "vue";
 import { BaseButton, BaseTabs, FieldCheckbox, FieldComboBox, FieldDisplay, FieldLabel, FieldNumber } from "@incutonez/core-ui";
 import { IconAdd, IconDelete, IconSave, IconUploadFile } from "@incutonez/core-ui/assets";
 import { makeArray, removeItem } from "@incutonez/core-ui/utils";
@@ -60,6 +60,26 @@ function getCellColor() {
 	return `background-color: #${found.id};`;
 }
 
+function addTempWorld() {
+	selectedWorld.value = GameWorld.create({
+		Name: "Temporary Name",
+	}, {
+		[Parent]: worlds,
+	});
+	worlds.push(selectedWorld.value);
+}
+
+function addTempScreen() {
+	selectedScreen.value = GameScreen.create({
+		totalRows: 11,
+		totalColumns: 16,
+		Name: "Screen Name",
+	}, {
+		init: true,
+	});
+	selectedWorld.value!.Children.push(selectedScreen.value);
+}
+
 function onUpdateTileColor() {
 	selectedTile.value?.updateImage();
 }
@@ -94,12 +114,7 @@ function onClickLoadBtn() {
 }
 
 function onClickAddWorld() {
-	selectedWorld.value = GameWorld.create({
-		Name: "Temporary Name",
-	}, {
-		[Parent]: worlds,
-	});
-	worlds.push(selectedWorld.value);
+	addTempWorld();
 }
 
 function onClickDeleteWorld() {
@@ -130,14 +145,7 @@ function onClickSaveBtn() {
 }
 
 function onClickAddScreen() {
-	selectedScreen.value = GameScreen.create({
-		totalRows: 11,
-		totalColumns: 16,
-		Name: "Screen Name",
-	}, {
-		init: true,
-	});
-	selectedWorld.value!.Children.push(selectedScreen.value);
+	addTempScreen();
 }
 
 function onClickDeleteScreen() {
@@ -186,6 +194,9 @@ watch(selectedCell, ($selectedCell, $previousValue) => {
 });
 
 provideCellCopy();
+addTempWorld();
+
+onMounted(() => addTempScreen());
 </script>
 
 <template>
@@ -200,7 +211,7 @@ provideCellCopy();
 			:class="gridCls"
 			@replace-cell="onReplaceCell"
 		/>
-		<section class="flex min-w-80 flex-col space-y-4">
+		<section class="flex w-96 flex-col space-y-4">
 			<article class="flex flex-col space-y-4">
 				<section class="flex w-full space-x-2 bg-white py-2">
 					<BaseButton
