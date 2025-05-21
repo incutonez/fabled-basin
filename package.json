@@ -21,7 +21,8 @@
 		"dev": "vite --config vite/config.dev.ts",
 		"build": "vite build --config vite/config.prod.ts",
 		"explode": "npm cache clean --force && npx rimraf package-lock.json **/node_modules --glob && npm i",
-		"prepare": "husky"
+		"prepare": "husky",
+		"update:deps": "node ./updateDependencies.js"
 	},
 	"dependencies": {
 		"@incutonez/core-ui": "^3.0.13",
