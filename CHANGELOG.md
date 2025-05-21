@@ -1,3 +1,9 @@
+## [2.2.0](https://github.com/incutonez/fabled-basin/compare/v2.1.2...v2.2.0) (2025-05-21)
+
+### Features
+
+* Updating Dependencies ([#39](https://github.com/incutonez/fabled-basin/issues/39)) ([3808a6e](https://github.com/incutonez/fabled-basin/commit/3808a6e79d78b74ccdbe8f92db28dfba16005038))
+
 ## [2.1.2](https://github.com/incutonez/fabled-basin/compare/v2.1.1...v2.1.2) (2025-04-29)
 
 ### Bug Fixes
